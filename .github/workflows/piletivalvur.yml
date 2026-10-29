@@ -2,8 +2,8 @@ name: Piletivalvur
 
 on:
   schedule:
-    # iga 5 min, täistunnist nihutatult (GitHubi koormus on täistunnil suurim)
-    - cron: "2-59/5 * * * *"
+    # iga 5 min (GitHub võib ajastatud töid koormuse tõttu hilinemisega käivitada)
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       test:
