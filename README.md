@@ -1,21 +1,23 @@
-# Piletivalvur – Eesti Draamateater
+# Piletivalvur – Draamateater ja Linnateater
 
-Kontrollib iga 5 minuti järel [Draamateatri mängukava](https://www.draamateater.ee/mangukava/) ja uudiseid ning saadab teavituse Macile ja telefoni (ntfy), kui:
+Kontrollib iga 5 minuti järel Eesti Draamateatri ja Tallinna Linnateatri mängukava ning uudiseid. Teavituse saadab Macile ja telefoni (ntfy), kui:
 
 | Sündmus | Teavitus |
 |---|---|
-| Uudistes teatatakse müügi algusest | kohe + eelmisel õhtul kl 20 + 15 min enne algust |
+| Müügi algus on teada (uudisest või Linnateatri mängukavast) | kohe + eelmisel õhtul kl 20 + 15 min enne algust |
 | Mängukavva lisandub ≥5 etendust (uus müügiperiood) | üks koondteavitus |
 | Lisandub üksik etendus (nt lisaetendus) | etenduse kaupa |
-| Välja müüdud etendusele tekib „Osta pilet“ | „Vabanes pileteid!“ + otselink Piletimaailma |
+| Müük avaneb (Linnateatris „Müük algab …“ → „Osta pilet“) | koondteavitus või etenduse kaupa |
+| Välja müüdud etendusele tekib „Osta pilet“ | „Vabanes pileteid!“ + otselink ostulehele |
 
-Teavitusele klõpsates avaneb ostuleht:
-- vabanenud piletite ja üksiku uue etenduse korral selle etenduse Piletimaailma ostuleht;
-- muudel juhtudel müügis olevate etenduste mängukava ([`?tickets=available`](https://www.draamateater.ee/mangukava/?tickets=available)).
+| | Draamateater | Linnateater |
+|---|---|---|
+| Allikas | [mängukava](https://www.draamateater.ee/mangukava/) HTML | [mängukava](https://linnateater.ee/mangukava/) taga olev `shows.json` (sisaldab ka müügi algusaega) |
+| Ostuleht | Piletimaailm | Piletilevi |
+| Müügis etendused | [`?tickets=available`](https://www.draamateater.ee/mangukava/?tickets=available) | [`?filter=available`](https://linnateater.ee/mangukava/?filter=available) |
+| Müük avaneb tavaliselt | E kl 10, kaks kuud korraga | kl 11, kolm kuud korraga |
 
-Telefonis on lisaks nupp „Osta pilet“ või „Müügis etendused“, uudiste puhul ka „Loe uudist“. Maci teavitused kasutavad `terminal-notifier`-it (`brew install terminal-notifier`), sest ilma selleta ei ava klõps linki.
-
-Müük avaneb tavaliselt **esmaspäeval kl 10**, kaks kuud korraga, umbes 3 kuud ette.
+Teavitusele klõpsates avaneb ostuleht: vabanenud piletite ja üksiku etenduse korral selle etenduse ostuleht, muudel juhtudel teatri müügis etenduste mängukava. Telefonis on lisaks nupp „Osta pilet“ või „Müügis etendused“, uudiste puhul ka „Loe uudist“. Maci teavitused kasutavad `terminal-notifier`-it (`brew install terminal-notifier`), sest ilma selleta ei ava klõps linki.
 
 ## Telefon (ntfy)
 
@@ -30,6 +32,7 @@ Teema nimi on juhuslik ja toimib nagu parool: kes seda teab, näeb samu teavitus
 Töötav koopia asub kaustas `~/Library/Application Support/Piletivalvur/`, sest macOS ei luba taustaprotsessil Documents kausta lugeda.
 
 - `config.json` – seaded (muudatus hakkab kehtima järgmisel kontrollil)
+  - `theaters`: jälgitavad teatrid, vaikimisi `["draamateater", "linnateater"]`
   - `watch_titles`: `[]` = kõik lavastused; nt `["Hamlet", "Mets"]` – vabanenud piletitest ja üksikutest uutest etendustest teavitatakse ainult nende kohta
   - `quiet_hours`: selle aja sees ei kontrollita (vaikimisi 00–07); öised muutused tulevad hommikul
   - `mac_notifications`, `ntfy_topic` – kanalid
@@ -63,6 +66,6 @@ Sama skript jookseb ka GitHub Actionsis töövoo [`.github/workflows/piletivalvu
 ## Piirangud
 
 - Maci koopia töötab ainult siis, kui Mac on ärkvel. Unest ärgates tehakse kontroll kohe.
-- Piletimaailma lehte otse ei loeta, sest see blokeerib automaatpäringud. Seisu võetakse teatri enda mängukavast, mis võib Piletimaailmast mõne minuti maha jääda.
+- Piletimaailma ja Piletilevi lehti otse ei loeta. Seisu võetakse teatri enda mängukavast, mis võib piletimüüjast mõne minuti maha jääda.
 - Vabanenud pilet võib kiiresti uuesti ära minna, seega reageeri teavitusele kohe.
 - Skript ei osta pileteid ise, ost jääb sinu teha.

@@ -1,4 +1,8 @@
 {
+ "theaters": [
+  "draamateater",
+  "linnateater"
+ ],
  "mac_notifications": false,
  "ntfy_server": "https://ntfy.sh",
  "ntfy_topic": "",

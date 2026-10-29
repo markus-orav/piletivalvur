@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Piletivalvur – jälgib Eesti Draamateatri mängukava ja uudiseid.
+"""Piletivalvur – jälgib Eesti Draamateatri ja Tallinna Linnateatri mängukava ning uudiseid.
 
 Teavitab (Maci teavitus + ntfy push), kui
-  * uudistes teatatakse piletimüügi algusest (+ meeldetuletus eelmisel õhtul ja 15 min enne),
+  * uudistes või mängukavas on teada piletimüügi algus (+ meeldetuletus eelmisel õhtul ja 15 min enne),
   * mängukavva lisandub etendusi / avaneb uue perioodi müük,
   * välja müüdud etendusele vabaneb pileteid.
 
@@ -27,12 +27,13 @@ CONFIG_PATH = Path(os.environ.get("PILETIVALVUR_CONFIG") or BASE / "config.json"
 STATE_PATH = BASE / "state.json"
 LOG_PATH = BASE / "piletivalvur.log"
 
-KAVA_URL = "https://www.draamateater.ee/mangukava/"
-BUY_URL = KAVA_URL + "?tickets=available"  # mängukava ainult nende etendustega, millel on „Osta pilet“
-NEWS_URL = "https://www.draamateater.ee/wp-json/wp/v2/posts?per_page=10&_fields=id,date,title,link,excerpt"
 UA = "Piletivalvur/1.0 (isiklik piletiteavitus)"
+DT_KAVA_URL = "https://www.draamateater.ee/mangukava/"
+LT_KAVA_URL = "https://linnateater.ee/mangukava/"
+LT_SHOWS_URL = "https://linnateater.ee/wp-content/uploads/cachedShows/shows.json"
 
 DEFAULT_CONFIG = {
+    "theaters": ["draamateater", "linnateater"],
     "mac_notifications": True,
     "ntfy_server": "https://ntfy.sh",
     "ntfy_topic": "",
@@ -110,11 +111,21 @@ def watched(cfg, title):
     return not titles or any(t.lower() in title.lower() for t in titles)
 
 
+def fmt_when(t):
+    return f"{'ETKNRLP'[t.weekday()]} {t.day}.{t.month} kl {t:%H:%M}"
+
+
 def fmt_perf(p):
     d = dt.date.fromisoformat(p["date"])
     wd = "ETKNRLP"[d.weekday()]
     venue = f", {p['venue']}" if p.get("venue") else ""
     return f"{p['title']} – {wd} {d.day}.{d.month} kl {p['time']}{venue}"
+
+
+def month_span(perfs):
+    months = sorted({p["date"][:7] for p in perfs})
+    names = [f"{MONTH_NAMES[int(m[5:])]} {m[:4]}" for m in (months[0], months[-1])]
+    return names[0] if months[0] == months[-1] else f"{names[0]} – {names[1]}"
 
 
 # --- teavitused ------------------------------------------------------------
@@ -150,7 +161,7 @@ def notify(cfg, title, message, url=None, priority=4, more=None):
         actions = []
         if url:
             body["click"] = url
-            label = "Osta pilet" if "piletimaailm" in url else "Müügis etendused"
+            label = "Osta pilet" if any(s in url for s in ("piletimaailm", "piletilevi")) else "Müügis etendused"
             actions.append({"action": "view", "label": label, "url": url})
         if more:
             actions.append({"action": "view", "label": more[0], "url": more[1]})
@@ -166,10 +177,12 @@ def notify(cfg, title, message, url=None, priority=4, more=None):
             log(f"ntfy teavitus ebaõnnestus: {e}")
 
 
-# --- mängukava -------------------------------------------------------------
+# --- mängukavad --------------------------------------------------------------
+# Iga teatri lugeja tagastab {võti: etendus}, võti = 'YYYY-MM-DD HH:MM Pealkiri'.
+# Etenduse status: "buy" (müügis, url = ostuleht), "soldout" või "other" (müük pole alanud;
+# kui algusaeg on teada, on see väljal "sale").
 
-def parse_kava(page, today):
-    """Tagastab {võti: etendus}. Võti = 'YYYY-MM-DD HH:MM Pealkiri'."""
+def parse_draamateater(page, today):
     perfs = {}
     year, prev_month, day, month = today.year, None, None, None
     for row in re.findall(r"<tr>(.*?)</tr>", page, re.S):
@@ -208,47 +221,126 @@ def parse_kava(page, today):
     return perfs
 
 
-def month_span(perfs):
-    months = sorted({p["date"][:7] for p in perfs})
-    names = [f"{MONTH_NAMES[int(m[5:])]} {m[:4]}" for m in (months[0], months[-1])]
-    return names[0] if months[0] == months[-1] else f"{names[0]} – {names[1]}"
+def parse_linnateater(shows, now):
+    """shows.json on sama fail, millest linnateater.ee mängukava end JavaScriptiga täidab."""
+    perfs = {}
+    for s in shows:
+        d = s.get("data") or {}
+        start, sale = d.get("startTime") or {}, d.get("salesTime") or {}
+        try:
+            date = dt.date(int(start["year"]), int(start["month"]), int(start["date"]))
+        except (KeyError, ValueError):
+            continue
+        sale_at = dt.datetime.fromtimestamp(int(sale["stamp"])) if sale.get("stamp") else None
+        # sama loogika, mis mängukava skriptis
+        if s.get("status") in ("sold_out", "no_tickets"):
+            status = "soldout"
+        elif s.get("status") == "future_sale" and sale_at and sale_at > now:
+            status = "other"
+        else:
+            status = "buy"
+        title = html.unescape(s.get("title") or "").strip()
+        p = {
+            "date": date.isoformat(),
+            "time": start.get("time", ""),
+            "title": title,
+            "venue": (s.get("location") or "").replace("Tallinna Linnateater, ", "").split(",")[0],
+            "desc": strip_tags(s.get("extra") or ""),
+            "status": status,
+            "url": d.get("url") if status == "buy" else None,
+        }
+        if status == "other":
+            p["sale"] = sale_at.isoformat()
+        perfs[f"{p['date']} {p['time']} {title}"] = p
+    return perfs
 
 
-def check_kava(cfg, state, now):
-    page = fetch(KAVA_URL)
-    perfs = parse_kava(page, now.date())
+THEATERS = {
+    "draamateater": {
+        "name": "Draamateater",
+        "kava": DT_KAVA_URL,
+        "buy": DT_KAVA_URL + "?tickets=available",  # ainult etendused, millel on „Osta pilet“
+        "news": "https://www.draamateater.ee/wp-json/wp/v2/posts?per_page=10&_fields=id,date,title,link,excerpt",
+        "sale_hour": 10,
+        "load": lambda now: parse_draamateater(fetch(DT_KAVA_URL), now.date()),
+    },
+    "linnateater": {
+        "name": "Linnateater",
+        "kava": LT_KAVA_URL,
+        "buy": LT_KAVA_URL + "?filter=available",
+        "news": "https://linnateater.ee/wp-json/wp/v2/posts?per_page=10&_fields=id,date,title,link,excerpt",
+        "sale_hour": 11,
+        "load": lambda now: parse_linnateater(json.loads(fetch(LT_SHOWS_URL)), now),
+    },
+}
+
+
+def check_kava(cfg, th, ts, now):
+    name = th["name"]
+    perfs = th["load"](now)
     if not perfs:
-        last = state.get("parse_alert_at")
+        last = ts.get("parse_alert_at")
         if not last or now - dt.datetime.fromisoformat(last) > dt.timedelta(hours=24):
             notify(cfg, "Piletivalvur vajab hoolitsust",
-                   "Mängukavast ei leitud ühtegi etendust – lehe ülesehitus võis muutuda.", KAVA_URL, 3)
-            state["parse_alert_at"] = now.isoformat()
-        return
-    old = state.get("perfs")
-    state["perfs"] = perfs
-    if old is None:
-        log(f"Esimene kontroll: {len(perfs)} etendust, {sum(p['status'] == 'soldout' for p in perfs.values())} välja müüdud")
+                   f"{name}: mängukavast ei leitud ühtegi etendust – lehe ülesehitus võis muutuda.", th["kava"], 3)
+            ts["parse_alert_at"] = now.isoformat()
         return
 
-    added = [p for k, p in perfs.items() if k not in old and p["date"] >= now.date().isoformat()]
+    # mängukavas teada olev müügi algus → meeldetuletus (sama aja kohta käiv uudis ei tee topelt)
+    upcoming = {}
+    for p in perfs.values():
+        if p.get("sale"):
+            upcoming.setdefault(p["sale"], []).append(p)
+    reminders = ts.setdefault("reminders", {})
+    for sale, ps in upcoming.items():
+        reminders.setdefault(sale, {"title": f"{len(ps)} etendust ({month_span(ps)})", "sale": sale, "sent": []})
+
+    old = ts.get("perfs")
+    ts["perfs"] = perfs
+    if old is None:
+        log(f"{name}: esimene kontroll, {len(perfs)} etendust, "
+            f"{sum(p['status'] == 'soldout' for p in perfs.values())} välja müüdud")
+        return
+
+    today = now.date().isoformat()
+    threshold = cfg.get("batch_threshold", 5)
+    added = [p for k, p in perfs.items() if k not in old and p["date"] >= today]
     opened = [p for k, p in perfs.items() if k in old and old[k]["status"] == "other" and p["status"] == "buy"]
     freed = [(k, p) for k, p in perfs.items() if k in old and old[k]["status"] == "soldout" and p["status"] == "buy"]
 
-    new_on_sale = added + opened
-    if len(new_on_sale) >= cfg.get("batch_threshold", 5):
-        buy = sum(p["status"] == "buy" for p in new_on_sale)
-        notify(cfg, "Draamateater: uued etendused müügis!",
-               f"Mängukavva lisandus {len(new_on_sale)} etendust ({month_span(new_on_sale)}), "
-               f"neist {buy} kohe müügis.", BUY_URL, 5)
+    if len(added) >= threshold:
+        buy = sum(p["status"] == "buy" for p in added)
+        sales = sorted(p["sale"] for p in added if p.get("sale"))
+        msg = f"Mängukavva lisandus {len(added)} etendust ({month_span(added)})"
+        if buy:
+            msg += f", neist {buy} kohe müügis"
+        if sales:
+            msg += f". Müük algab {fmt_when(dt.datetime.fromisoformat(sales[0]))}"
+        notify(cfg, f"{name}: uued etendused " + ("müügis!" if buy else "kavas"), msg + ".", th["buy"], 5)
     else:
-        for p in new_on_sale:
+        for p in added:
             if not watched(cfg, p["title"]):
                 continue
-            label = "müügis" if p["status"] == "buy" else ("piletid juba otsas" if p["status"] == "soldout" else "müük pole veel alanud")
-            notify(cfg, "Draamateater: uus etendus", f"{fmt_perf(p)} ({label})", p["url"] or KAVA_URL,
+            if p["status"] == "buy":
+                label = "müügis"
+            elif p["status"] == "soldout":
+                label = "piletid juba otsas"
+            elif p.get("sale"):
+                label = f"müük algab {fmt_when(dt.datetime.fromisoformat(p['sale']))}"
+            else:
+                label = "müük pole veel alanud"
+            notify(cfg, f"{name}: uus etendus", f"{fmt_perf(p)} ({label})", p["url"] or th["kava"],
                    4 if p["status"] == "buy" else 3)
 
-    notified = state.setdefault("freed_notified", {})
+    if len(opened) >= threshold:
+        notify(cfg, f"{name}: piletimüük avanes!",
+               f"Müüki tuli {len(opened)} etendust ({month_span(opened)}).", th["buy"], 5)
+    else:
+        for p in opened:
+            if watched(cfg, p["title"]):
+                notify(cfg, f"{name}: müük avanes", fmt_perf(p), p["url"], 5)
+
+    notified = ts.setdefault("freed_notified", {})
     for k, p in freed:
         if not watched(cfg, p["title"]):
             continue
@@ -256,14 +348,13 @@ def check_kava(cfg, state, now):
         if last and now - dt.datetime.fromisoformat(last) < dt.timedelta(minutes=cfg.get("renotify_minutes", 60)):
             continue
         notified[k] = now.isoformat()
-        notify(cfg, "Vabanes pileteid!", fmt_perf(p), p["url"], 5)
-    today = now.date().isoformat()
-    state["freed_notified"] = {k: v for k, v in notified.items() if k[:10] >= today}
+        notify(cfg, f"{name}: vabanes pileteid!", fmt_perf(p), p["url"], 5)
+    ts["freed_notified"] = {k: v for k, v in notified.items() if k[:10] >= today}
 
 
-# --- uudised ---------------------------------------------------------------
+# --- uudised ja meeldetuletused ----------------------------------------------
 
-def parse_sale_time(text, posted):
+def parse_sale_time(text, posted, default_hour=10):
     """Leiab lausest, mis räägib müügist, müügi alguse aja. None, kui ei leia."""
     for sentence in re.split(r"(?<=[.!?])\s+(?=[A-ZÕÄÖÜ„])", text):
         if not SALE_WORDS.search(sentence):
@@ -273,7 +364,7 @@ def parse_sale_time(text, posted):
             continue
         month = next(n for s, n in MONTH_STEMS if dm.group(2).lower().startswith(s))
         tm = TIME_RE.search(sentence)
-        hour, minute = (int(tm.group(1)), int(tm.group(2) or 0)) if tm else (10, 0)
+        hour, minute = (int(tm.group(1)), int(tm.group(2) or 0)) if tm else (default_hour, 0)
         year = posted.year + (1 if month < posted.month else 0)
         try:
             return dt.datetime(year, month, int(dm.group(1)), hour, minute)
@@ -282,11 +373,11 @@ def parse_sale_time(text, posted):
     return None
 
 
-def check_news(cfg, state, now):
-    posts = json.loads(fetch(NEWS_URL))
-    first_run = "seen_news" not in state
-    seen = set(state.get("seen_news", []))
-    reminders = state.setdefault("reminders", {})
+def check_news(cfg, th, ts, now):
+    posts = json.loads(fetch(th["news"]))
+    first_run = "seen_news" not in ts
+    seen = set(ts.get("seen_news", []))
+    reminders = ts.setdefault("reminders", {})
     for post in posts:
         pid = str(post["id"])
         if pid in seen:
@@ -297,31 +388,47 @@ def check_news(cfg, state, now):
         if not SALE_WORDS.search(title + " " + excerpt):
             continue
         # sissejuhatus enne pealkirja: pealkirjas on vahel hoopis etenduse kuupäev
-        sale = parse_sale_time(excerpt + " " + title, dt.datetime.fromisoformat(post["date"]))
+        sale = parse_sale_time(excerpt + " " + title, dt.datetime.fromisoformat(post["date"]), th["sale_hour"])
         if sale and sale > now:
-            reminders[pid] = {"title": title, "sale": sale.isoformat(), "link": post["link"], "sent": []}
+            r = reminders.setdefault(sale.isoformat(), {"sale": sale.isoformat(), "sent": []})
+            r.update(title=title, link=post["link"])
         if not first_run:
             msg = excerpt[:220] + ("…" if len(excerpt) > 220 else "")
-            notify(cfg, f"Draamateater: {title}", msg, BUY_URL, 5, ("Loe uudist", post["link"]))
-    state["seen_news"] = sorted(seen, key=int)[-50:]
+            notify(cfg, f"{th['name']}: {title}", msg, th["buy"], 5, ("Loe uudist", post["link"]))
+    ts["seen_news"] = sorted(seen, key=int)[-50:]
 
-    for pid, r in list(reminders.items()):
+
+def send_reminders(cfg, th, ts, now):
+    reminders = ts.get("reminders", {})
+    for key, r in list(reminders.items()):
         sale = dt.datetime.fromisoformat(r["sale"])
         if now >= sale:
-            del reminders[pid]
+            del reminders[key]
             continue
         eve = (sale - dt.timedelta(days=1)).replace(hour=20, minute=0)
         soon = sale - dt.timedelta(minutes=15)
-        when = f"{'ETKNRLP'[sale.weekday()]} {sale.day}.{sale.month} kl {sale:%H:%M}"
+        more = ("Loe uudist", r["link"]) if r.get("link") else None
         if now >= soon and "soon" not in r["sent"]:
             r["sent"] += ["eve", "soon"]
-            notify(cfg, "Piletimüük algab 15 min pärast!", f"{r['title']} ({when})", BUY_URL, 5)
+            notify(cfg, f"{th['name']}: piletimüük algab 15 min pärast!",
+                   f"{fmt_when(sale)} – {r['title']}", th["buy"], 5, more)
         elif now >= eve and "eve" not in r["sent"]:
             r["sent"].append("eve")
-            notify(cfg, "Homme algab piletimüük", f"{r['title']} ({when})", BUY_URL, 4, ("Loe uudist", r["link"]))
+            day = "täna" if sale.date() == now.date() else "homme"
+            notify(cfg, f"{th['name']}: piletimüük algab {day}",
+                   f"{fmt_when(sale)} – {r['title']}", th["buy"], 4, more)
 
 
 # --- käivitus --------------------------------------------------------------
+
+def theater_state(state, tid):
+    theaters = state.setdefault("theaters", {})
+    if tid == "draamateater" and tid not in theaters and "perfs" in state:
+        # vanem seis oli ainult Draamateatri oma ja asus juurtasemel
+        theaters[tid] = {k: state.pop(k) for k in ("perfs", "seen_news", "reminders", "freed_notified", "parse_alert_at")
+                         if k in state}
+    return theaters.setdefault(tid, {})
+
 
 def run(force=False):
     cfg = load_config()
@@ -329,38 +436,45 @@ def run(force=False):
     if not force and in_quiet_hours(cfg, now):
         return
     state = load_json(STATE_PATH, {})
-    for name, check in (("mängukava", check_kava), ("uudised", check_news)):
-        try:
-            check(cfg, state, now)
-        except Exception as e:  # võrgukatkestus vms – proovime järgmisel korral uuesti
-            log(f"{name}: viga {type(e).__name__}: {e}")
+    for tid in cfg.get("theaters") or list(THEATERS):
+        th = THEATERS.get(tid)
+        if not th:
+            log(f"Tundmatu teater seadetes: {tid}")
+            continue
+        ts = theater_state(state, tid)
+        for step, check in (("mängukava", check_kava), ("uudised", check_news), ("meeldetuletused", send_reminders)):
+            try:
+                check(cfg, th, ts, now)
+            except Exception as e:  # võrgukatkestus vms – proovime järgmisel korral uuesti
+                log(f"{th['name']} {step}: viga {type(e).__name__}: {e}")
     state["last_check"] = now.isoformat()
     save_json(STATE_PATH, state)
 
 
 def status():
     state = load_json(STATE_PATH, {})
-    perfs = state.get("perfs", {})
     print(f"Viimane kontroll: {state.get('last_check', '–')}")
-    by_month = {}
-    for p in perfs.values():
-        b = by_month.setdefault(p["date"][:7], [0, 0])
-        b[0 if p["status"] == "buy" else 1] += 1
-    for m in sorted(by_month):
-        print(f"  {MONTH_NAMES[int(m[5:])]:>10} {m[:4]}: müügis {by_month[m][0]:3}, otsas/tulekul {by_month[m][1]:3}")
-    for r in state.get("reminders", {}).values():
-        print(f"Meeldetuletus: {r['title']} → müük algab {r['sale']}")
+    for tid, ts in state.get("theaters", {}).items():
+        print(THEATERS[tid]["name"] if tid in THEATERS else tid)
+        by_month = {}
+        for p in ts.get("perfs", {}).values():
+            b = by_month.setdefault(p["date"][:7], [0, 0])
+            b[0 if p["status"] == "buy" else 1] += 1
+        for m in sorted(by_month):
+            print(f"  {MONTH_NAMES[int(m[5:])]:>10} {m[:4]}: müügis {by_month[m][0]:3}, otsas/tulekul {by_month[m][1]:3}")
+        for r in ts.get("reminders", {}).values():
+            print(f"  Meeldetuletus: {r['title']} → müük algab {r['sale']}")
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Draamateatri piletivalvur")
+    ap = argparse.ArgumentParser(description="Draamateatri ja Linnateatri piletivalvur")
     ap.add_argument("--test", action="store_true", help="saada proovitekst kõikidesse kanalitesse")
     ap.add_argument("--status", action="store_true", help="näita viimase kontrolli kokkuvõtet")
     ap.add_argument("--force", action="store_true", help="kontrolli ka vaikse aja sees")
     args = ap.parse_args()
     if args.test:
-        cfg = load_config()
-        notify(cfg, "Piletivalvur töötab", "Klõpsa – avaneb müügis olevate etenduste leht.", BUY_URL)
+        notify(load_config(), "Piletivalvur töötab", "Klõpsa – avaneb müügis olevate etenduste leht.",
+               THEATERS["draamateater"]["buy"])
     elif args.status:
         status()
     else:
