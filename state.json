@@ -1,0 +1,1620 @@
+{
+ "perfs": {
+  "2026-10-29 19:00 Ükskord Liibanonis": {
+   "date": "2026-10-29",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "ingliskeelsete subtiitritega / with English surtitles",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-29 19:00 Kõrvaltegelased": {
+   "date": "2026-10-29",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-30 19:00 Eneseabiõpik": {
+   "date": "2026-10-30",
+   "time": "19:00",
+   "title": "Eneseabiõpik",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-30 19:00 B-koondis": {
+   "date": "2026-10-30",
+   "time": "19:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-31 17:00 Lotte": {
+   "date": "2026-10-31",
+   "time": "17:00",
+   "title": "Lotte",
+   "venue": "Maalisaal",
+   "desc": "Kohvriteatri etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-31 19:00 Tõde ja õigus": {
+   "date": "2026-10-31",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-31 19:00 Pangalaen": {
+   "date": "2026-10-31",
+   "time": "19:00",
+   "title": "Pangalaen",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-10-31 19:00 Lotte": {
+   "date": "2026-10-31",
+   "time": "19:00",
+   "title": "Lotte",
+   "venue": "Maalisaal",
+   "desc": "Kohvriteatri etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-02 19:00 Prima facie": {
+   "date": "2026-11-02",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-03 19:00 500 aastat sõprust": {
+   "date": "2026-11-03",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-03 19:00 Erakõnelused": {
+   "date": "2026-11-03",
+   "time": "19:00",
+   "title": "Erakõnelused",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-04 19:00 500 aastat sõprust": {
+   "date": "2026-11-04",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "kirjeldustõlkega etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-04 19:00 Erakõnelused": {
+   "date": "2026-11-04",
+   "time": "19:00",
+   "title": "Erakõnelused",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-05 19:00 Café Théâtral": {
+   "date": "2026-11-05",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153669/buy?lang=et"
+  },
+  "2026-11-05 19:00 Skalpell": {
+   "date": "2026-11-05",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-06 15:30 Ringkäik Eesti Draamateatris": {
+   "date": "2026-11-06",
+   "time": "15:30",
+   "title": "Ringkäik Eesti Draamateatris",
+   "venue": "teatrimaja",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-06 19:00 Lehman Brothers": {
+   "date": "2026-11-06",
+   "time": "19:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-06 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2026-11-06",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-07 19:00 Ükskord Liibanonis": {
+   "date": "2026-11-07",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "ingliskeelsete subtiitritega / with English surtitles",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-07 19:00 Kõrvaltegelased": {
+   "date": "2026-11-07",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-09 19:00 Hamlet": {
+   "date": "2026-11-09",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-10 16:00 Ringkäik Eesti Draamateatris": {
+   "date": "2026-11-10",
+   "time": "16:00",
+   "title": "Ringkäik Eesti Draamateatris",
+   "venue": "teatrimaja",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154071/buy?lang=et"
+  },
+  "2026-11-10 19:00 Hamlet": {
+   "date": "2026-11-10",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-10 19:00 Prima facie": {
+   "date": "2026-11-10",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-11 19:00 12 vihast meest": {
+   "date": "2026-11-11",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153638/buy?lang=et"
+  },
+  "2026-11-11 19:00 Maag": {
+   "date": "2026-11-11",
+   "time": "19:00",
+   "title": "Maag",
+   "venue": "väike saal",
+   "desc": "viimaseid kordi",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-12 19:00 12 vihast meest": {
+   "date": "2026-11-12",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153639/buy?lang=et"
+  },
+  "2026-11-12 19:00 Maag": {
+   "date": "2026-11-12",
+   "time": "19:00",
+   "title": "Maag",
+   "venue": "väike saal",
+   "desc": "viimaseid kordi",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-13 19:00 500 aastat sõprust": {
+   "date": "2026-11-13",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "NB! \"Tõde ja õigus\" on asendatud etendusega \"500 aastat sõprust\"",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-13 19:00 Solist": {
+   "date": "2026-11-13",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "NB! Etendus jääb ära! Asendusetendus toimub 22.01.2027",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-14 19:00 Hamlet": {
+   "date": "2026-11-14",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-14 19:00 Mets": {
+   "date": "2026-11-14",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "esietendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-16 19:00 Hamlet": {
+   "date": "2026-11-16",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-16 19:00 Võõrad": {
+   "date": "2026-11-16",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-17 19:00 Café Théâtral": {
+   "date": "2026-11-17",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153670/buy?lang=et"
+  },
+  "2026-11-17 19:00 Võõrad": {
+   "date": "2026-11-17",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-18 19:00 500 aastat sõprust": {
+   "date": "2026-11-18",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "eestikeelsete subtiitritega etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-18 19:00 Prima facie": {
+   "date": "2026-11-18",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "Link: pärast etendust kohtumine trupiga",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-18 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2026-11-18",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-19 19:00 Ükskord Liibanonis": {
+   "date": "2026-11-19",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "ingliskeelsete subtiitritega / with English surtitles",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-19 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2026-11-19",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-20 19:00 Lehman Brothers": {
+   "date": "2026-11-20",
+   "time": "19:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-20 19:00 Mets": {
+   "date": "2026-11-20",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-21 19:00 Tõde ja õigus": {
+   "date": "2026-11-21",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "reserveeritud etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-21 19:00 Pangalaen": {
+   "date": "2026-11-21",
+   "time": "19:00",
+   "title": "Pangalaen",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-23 19:00 Eneseabiõpik": {
+   "date": "2026-11-23",
+   "time": "19:00",
+   "title": "Eneseabiõpik",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-23 19:00 B-koondis": {
+   "date": "2026-11-23",
+   "time": "19:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-24 18:00 Lehman Brothers": {
+   "date": "2026-11-24",
+   "time": "18:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "NB! \"Noorelt teatrisse!\" etendus, pilet kehtib ainult kuni 26-aastastele (k.a). Etenduse algus 18",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-24 18:00 B-koondis": {
+   "date": "2026-11-24",
+   "time": "18:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "NB! \"Noorelt teatrisse!\" etendus, pilet kehtib ainult kuni 26-aastastele (k.a). Etenduse algus 18",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-25 19:00 Caligula": {
+   "date": "2026-11-25",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-25 19:00 Kõrvaltegelased": {
+   "date": "2026-11-25",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-26 16:00 Ringkäik Eesti Draamateatris": {
+   "date": "2026-11-26",
+   "time": "16:00",
+   "title": "Ringkäik Eesti Draamateatris",
+   "venue": "teatrimaja",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-26 19:00 Caligula": {
+   "date": "2026-11-26",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-26 19:00 Erakõnelused": {
+   "date": "2026-11-26",
+   "time": "19:00",
+   "title": "Erakõnelused",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-27 19:00 Tõde ja õigus": {
+   "date": "2026-11-27",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-27 19:00 Mets": {
+   "date": "2026-11-27",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-28 14:00 Tõde ja õigus": {
+   "date": "2026-11-28",
+   "time": "14:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-28 14:00 Mets": {
+   "date": "2026-11-28",
+   "time": "14:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-30 19:00 Ükskord Liibanonis": {
+   "date": "2026-11-30",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "ingliskeelsete subtiitritega / with English surtitles",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-30 19:00 Skalpell": {
+   "date": "2026-11-30",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-11-30 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2026-11-30",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-01 19:00 Lehman Brothers": {
+   "date": "2026-12-01",
+   "time": "19:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-01 19:00 Maag": {
+   "date": "2026-12-01",
+   "time": "19:00",
+   "title": "Maag",
+   "venue": "väike saal",
+   "desc": "viimaseid kordi",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-01 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2026-12-01",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-02 19:00 Ükskord Liibanonis": {
+   "date": "2026-12-02",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "ingliskeelsete subtiitritega / with English surtitles",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-02 19:00 Kõrvaltegelased": {
+   "date": "2026-12-02",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-03 16:00 Ringkäik Eesti Draamateatris": {
+   "date": "2026-12-03",
+   "time": "16:00",
+   "title": "Ringkäik Eesti Draamateatris",
+   "venue": "teatrimaja",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154073/buy?lang=et"
+  },
+  "2026-12-03 19:00 Ükskord Liibanonis": {
+   "date": "2026-12-03",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "ingliskeelsete subtiitritega / with English surtitles",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-03 19:00 Kõrvaltegelased": {
+   "date": "2026-12-03",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-04 19:00 12 vihast meest": {
+   "date": "2026-12-04",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153640/buy?lang=et"
+  },
+  "2026-12-04 19:00 Prima facie": {
+   "date": "2026-12-04",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/152975/buy?lang=et"
+  },
+  "2026-12-05 19:00 Tõde ja õigus": {
+   "date": "2026-12-05",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-05 19:00 Mets": {
+   "date": "2026-12-05",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-05 19:00 Solist": {
+   "date": "2026-12-05",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-07 19:00 Café Théâtral": {
+   "date": "2026-12-07",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153942/buy?lang=et"
+  },
+  "2026-12-07 19:00 Skalpell": {
+   "date": "2026-12-07",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-08 19:00 Hamlet": {
+   "date": "2026-12-08",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-08 19:00 Mets": {
+   "date": "2026-12-08",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-09 19:00 Café Théâtral": {
+   "date": "2026-12-09",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/153671/buy?lang=et"
+  },
+  "2026-12-09 19:00 Võõrad": {
+   "date": "2026-12-09",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-10 19:00 Café Théâtral": {
+   "date": "2026-12-10",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-10 19:00 Võõrad": {
+   "date": "2026-12-10",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-11 19:00 500 aastat sõprust": {
+   "date": "2026-12-11",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-11 19:00 Erakõnelused": {
+   "date": "2026-12-11",
+   "time": "19:00",
+   "title": "Erakõnelused",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-12 19:00 Hamlet": {
+   "date": "2026-12-12",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-12 19:00 Mets": {
+   "date": "2026-12-12",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-14 19:00 Eneseabiõpik": {
+   "date": "2026-12-14",
+   "time": "19:00",
+   "title": "Eneseabiõpik",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-14 19:00 B-koondis": {
+   "date": "2026-12-14",
+   "time": "19:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-15 19:00 Eneseabiõpik": {
+   "date": "2026-12-15",
+   "time": "19:00",
+   "title": "Eneseabiõpik",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-15 19:00 B-koondis": {
+   "date": "2026-12-15",
+   "time": "19:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-16 19:00 Caligula": {
+   "date": "2026-12-16",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-16 19:00 Maag": {
+   "date": "2026-12-16",
+   "time": "19:00",
+   "title": "Maag",
+   "venue": "väike saal",
+   "desc": "viimast korda",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-16 19:00 Solist": {
+   "date": "2026-12-16",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-17 16:00 Ringkäik Eesti Draamateatris": {
+   "date": "2026-12-17",
+   "time": "16:00",
+   "title": "Ringkäik Eesti Draamateatris",
+   "venue": "teatrimaja",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154074/buy?lang=et"
+  },
+  "2026-12-17 19:00 Caligula": {
+   "date": "2026-12-17",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-17 19:00 Prima facie": {
+   "date": "2026-12-17",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-17 19:00 Solist": {
+   "date": "2026-12-17",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-18 19:00 500 aastat sõprust": {
+   "date": "2026-12-18",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-18 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2026-12-18",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-19 19:00 Hamlet": {
+   "date": "2026-12-19",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2026-12-19 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2026-12-19",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "soldout",
+   "url": null
+  },
+  "2027-01-11 19:00 Skalpell": {
+   "date": "2027-01-11",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "14. septembri asendusetendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2027-01-12 19:00 Caligula": {
+   "date": "2027-01-12",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154975/buy?lang=et"
+  },
+  "2027-01-12 19:00 Prima facie": {
+   "date": "2027-01-12",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155018/buy?lang=et"
+  },
+  "2027-01-12 19:00 Solist": {
+   "date": "2027-01-12",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155028/buy?lang=et"
+  },
+  "2027-01-13 19:00 Caligula": {
+   "date": "2027-01-13",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154976/buy?lang=et"
+  },
+  "2027-01-13 19:00 Solist": {
+   "date": "2027-01-13",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155029/buy?lang=et"
+  },
+  "2027-01-14 19:00 Hamlet": {
+   "date": "2027-01-14",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154985/buy?lang=et"
+  },
+  "2027-01-14 19:00 Skalpell": {
+   "date": "2027-01-14",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155023/buy?lang=et"
+  },
+  "2027-01-15 19:00 Tõde ja õigus": {
+   "date": "2027-01-15",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155034/buy?lang=et"
+  },
+  "2027-01-16 19:00 12 vihast meest": {
+   "date": "2027-01-16",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154958/buy?lang=et"
+  },
+  "2027-01-16 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2027-01-16",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155044/buy?lang=et"
+  },
+  "2027-01-16 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2027-01-16",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155075/buy?lang=et"
+  },
+  "2027-01-18 19:00 500 aastat sõprust": {
+   "date": "2027-01-18",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154965/buy?lang=et"
+  },
+  "2027-01-19 19:00 12 vihast meest": {
+   "date": "2027-01-19",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154959/buy?lang=et"
+  },
+  "2027-01-19 19:00 Prima facie": {
+   "date": "2027-01-19",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155020/buy?lang=et"
+  },
+  "2027-01-20 19:00 Café Théâtral": {
+   "date": "2027-01-20",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154957/buy?lang=et"
+  },
+  "2027-01-20 19:00 Võõrad": {
+   "date": "2027-01-20",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155079/buy?lang=et"
+  },
+  "2027-01-21 19:00 Café Théâtral": {
+   "date": "2027-01-21",
+   "time": "19:00",
+   "title": "Café Théâtral",
+   "venue": "suur saal",
+   "desc": "reserveeritud etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2027-01-21 19:00 Võõrad": {
+   "date": "2027-01-21",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "Reserveeritud etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2027-01-22 19:00 Kõrvaltegelased": {
+   "date": "2027-01-22",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154993/buy?lang=et"
+  },
+  "2027-01-23 19:00 Lehman Brothers": {
+   "date": "2027-01-23",
+   "time": "19:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154998/buy?lang=et"
+  },
+  "2027-01-23 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2027-01-23",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155045/buy?lang=et"
+  },
+  "2027-01-23 19:00 Solist": {
+   "date": "2027-01-23",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155030/buy?lang=et"
+  },
+  "2027-01-25 19:00 Hamlet": {
+   "date": "2027-01-25",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154986/buy?lang=et"
+  },
+  "2027-01-25 19:00 Võõrad": {
+   "date": "2027-01-25",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155081/buy?lang=et"
+  },
+  "2027-01-26 19:00 Hamlet": {
+   "date": "2027-01-26",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154987/buy?lang=et"
+  },
+  "2027-01-26 19:00 Kõrvaltegelased": {
+   "date": "2027-01-26",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154994/buy?lang=et"
+  },
+  "2027-01-27 19:00 500 aastat sõprust": {
+   "date": "2027-01-27",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154966/buy?lang=et"
+  },
+  "2027-01-27 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2027-01-27",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155046/buy?lang=et"
+  },
+  "2027-01-28 19:00 500 aastat sõprust": {
+   "date": "2027-01-28",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154967/buy?lang=et"
+  },
+  "2027-01-28 19:00 Pangalaen": {
+   "date": "2027-01-28",
+   "time": "19:00",
+   "title": "Pangalaen",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155015/buy?lang=et"
+  },
+  "2027-01-28 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2027-01-28",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155076/buy?lang=et"
+  },
+  "2027-01-29 19:00 Tõde ja õigus": {
+   "date": "2027-01-29",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "reserveeritud etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2027-01-29 19:00 Mets": {
+   "date": "2027-01-29",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "Reserveeritud etendus",
+   "status": "soldout",
+   "url": null
+  },
+  "2027-01-30 12:00 Tõde ja õigus": {
+   "date": "2027-01-30",
+   "time": "12:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "NB! Etenduse algus kell 12",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155098/buy?lang=et"
+  },
+  "2027-01-30 12:00 Mets": {
+   "date": "2027-01-30",
+   "time": "12:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "NB! Etenduse algus kell 12",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155099/buy?lang=et"
+  },
+  "2027-02-01 19:00 B-koondis": {
+   "date": "2027-02-01",
+   "time": "19:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154962/buy?lang=et"
+  },
+  "2027-02-01 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2027-02-01",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155077/buy?lang=et"
+  },
+  "2027-02-02 19:00 Caligula": {
+   "date": "2027-02-02",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154977/buy?lang=et"
+  },
+  "2027-02-03 19:00 Caligula": {
+   "date": "2027-02-03",
+   "time": "19:00",
+   "title": "Caligula",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154978/buy?lang=et"
+  },
+  "2027-02-04 19:00 Hamlet": {
+   "date": "2027-02-04",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154988/buy?lang=et"
+  },
+  "2027-02-04 19:00 Võõrad": {
+   "date": "2027-02-04",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155082/buy?lang=et"
+  },
+  "2027-02-05 19:00 500 aastat sõprust": {
+   "date": "2027-02-05",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154968/buy?lang=et"
+  },
+  "2027-02-05 19:00 Prima facie": {
+   "date": "2027-02-05",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155021/buy?lang=et"
+  },
+  "2027-02-06 19:00 Tõde ja õigus": {
+   "date": "2027-02-06",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155035/buy?lang=et"
+  },
+  "2027-02-06 19:00 Pangalaen": {
+   "date": "2027-02-06",
+   "time": "19:00",
+   "title": "Pangalaen",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155016/buy?lang=et"
+  },
+  "2027-02-08 19:00 Ükskord Liibanonis": {
+   "date": "2027-02-08",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155073/buy?lang=et"
+  },
+  "2027-02-08 19:00 Skalpell": {
+   "date": "2027-02-08",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155024/buy?lang=et"
+  },
+  "2027-02-09 19:00 Ükskord Liibanonis": {
+   "date": "2027-02-09",
+   "time": "19:00",
+   "title": "Ükskord Liibanonis",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155074/buy?lang=et"
+  },
+  "2027-02-09 19:00 Kõrvaltegelased": {
+   "date": "2027-02-09",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154995/buy?lang=et"
+  },
+  "2027-02-10 19:00 12 vihast meest": {
+   "date": "2027-02-10",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154960/buy?lang=et"
+  },
+  "2027-02-10 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2027-02-10",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155047/buy?lang=et"
+  },
+  "2027-02-10 19:00 Solist": {
+   "date": "2027-02-10",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155031/buy?lang=et"
+  },
+  "2027-02-11 19:00 12 vihast meest": {
+   "date": "2027-02-11",
+   "time": "19:00",
+   "title": "12 vihast meest",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154961/buy?lang=et"
+  },
+  "2027-02-11 19:00 Ühe naise võitlused ja metamorfoosid": {
+   "date": "2027-02-11",
+   "time": "19:00",
+   "title": "Ühe naise võitlused ja metamorfoosid",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155048/buy?lang=et"
+  },
+  "2027-02-11 19:00 Solist": {
+   "date": "2027-02-11",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155032/buy?lang=et"
+  },
+  "2027-02-12 19:00 500 aastat sõprust": {
+   "date": "2027-02-12",
+   "time": "19:00",
+   "title": "500 aastat sõprust",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154969/buy?lang=et"
+  },
+  "2027-02-12 19:00 Prima facie": {
+   "date": "2027-02-12",
+   "time": "19:00",
+   "title": "Prima facie",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155022/buy?lang=et"
+  },
+  "2027-02-13 19:00 Eneseabiõpik": {
+   "date": "2027-02-13",
+   "time": "19:00",
+   "title": "Eneseabiõpik",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154979/buy?lang=et"
+  },
+  "2027-02-13 19:00 Kõrvaltegelased": {
+   "date": "2027-02-13",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154996/buy?lang=et"
+  },
+  "2027-02-16 19:00 Lehman Brothers": {
+   "date": "2027-02-16",
+   "time": "19:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154999/buy?lang=et"
+  },
+  "2027-02-16 19:00 Mets": {
+   "date": "2027-02-16",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155002/buy?lang=et"
+  },
+  "2027-02-16 19:00 Solist": {
+   "date": "2027-02-16",
+   "time": "19:00",
+   "title": "Solist",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/149152/buy?lang=et"
+  },
+  "2027-02-17 19:00 Lehman Brothers": {
+   "date": "2027-02-17",
+   "time": "19:00",
+   "title": "Lehman Brothers",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155000/buy?lang=et"
+  },
+  "2027-02-17 19:00 Kõrvaltegelased": {
+   "date": "2027-02-17",
+   "time": "19:00",
+   "title": "Kõrvaltegelased",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154997/buy?lang=et"
+  },
+  "2027-02-18 19:00 Pangalaen": {
+   "date": "2027-02-18",
+   "time": "19:00",
+   "title": "Pangalaen",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155017/buy?lang=et"
+  },
+  "2027-02-19 19:00 Skalpell": {
+   "date": "2027-02-19",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155025/buy?lang=et"
+  },
+  "2027-02-20 19:00 Skalpell": {
+   "date": "2027-02-20",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155026/buy?lang=et"
+  },
+  "2027-02-22 19:00 Skalpell": {
+   "date": "2027-02-22",
+   "time": "19:00",
+   "title": "Skalpell",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155027/buy?lang=et"
+  },
+  "2027-02-22 19:00 Vaimude tund Koidula tänavas": {
+   "date": "2027-02-22",
+   "time": "19:00",
+   "title": "Vaimude tund Koidula tänavas",
+   "venue": "Maalisaal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155078/buy?lang=et"
+  },
+  "2027-02-23 19:00 Hamlet": {
+   "date": "2027-02-23",
+   "time": "19:00",
+   "title": "Hamlet",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154989/buy?lang=et"
+  },
+  "2027-02-23 19:00 Võõrad": {
+   "date": "2027-02-23",
+   "time": "19:00",
+   "title": "Võõrad",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155083/buy?lang=et"
+  },
+  "2027-02-25 19:00 Eneseabiõpik": {
+   "date": "2027-02-25",
+   "time": "19:00",
+   "title": "Eneseabiõpik",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154980/buy?lang=et"
+  },
+  "2027-02-25 19:00 B-koondis": {
+   "date": "2027-02-25",
+   "time": "19:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/154963/buy?lang=et"
+  },
+  "2027-02-26 19:00 Tõde ja õigus": {
+   "date": "2027-02-26",
+   "time": "19:00",
+   "title": "Tõde ja õigus",
+   "venue": "suur saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155036/buy?lang=et"
+  },
+  "2027-02-26 19:00 Mets": {
+   "date": "2027-02-26",
+   "time": "19:00",
+   "title": "Mets",
+   "venue": "väike saal",
+   "desc": "",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155003/buy?lang=et"
+  },
+  "2027-02-26 12:00 B-koondis": {
+   "date": "2027-02-26",
+   "time": "12:00",
+   "title": "B-koondis",
+   "venue": "väike saal",
+   "desc": "NB! Etenduse algus kell 12",
+   "status": "buy",
+   "url": "https://www.piletimaailm.com/performances/155100/buy?lang=et"
+  }
+ },
+ "reminders": {},
+ "seen_news": [
+  "36489",
+  "36638",
+  "36699",
+  "36742",
+  "36746",
+  "36756",
+  "36768",
+  "36774",
+  "36901",
+  "36912"
+ ],
+ "last_check": "2026-10-29T11:56:00"
+}
