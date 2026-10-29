@@ -41,6 +41,7 @@ DEFAULT_CONFIG = {
     "quiet_hours": ["00:00", "07:00"],
     "batch_threshold": 5,        # nii mitu uut etendust korraga = üks koondteavitus
     "renotify_minutes": 60,      # sama etenduse vabanemisest ei teavita tihedamini
+    "cloud_repo": "",            # nt "kasutaja/piletivalvur": ntfy ainult siis, kui selle repo pilvekontroll seisab
 }
 
 MONTH_STEMS = [
@@ -136,6 +137,24 @@ TERMINAL_NOTIFIER = next((p for p in (str(Path.home() / "Applications/terminal-n
                           if Path(p).exists()), None)
 
 
+_cloud_ok = None
+
+
+def cloud_running(repo):
+    """Kas repo ajastatud pilvekontroll on viimase 20 min jooksul õnnestunud (GitHubi avalik API)."""
+    global _cloud_ok
+    if _cloud_ok is None:
+        try:
+            runs = json.loads(fetch(f"https://api.github.com/repos/{repo}/actions/runs"
+                                    "?event=schedule&status=success&per_page=1"))["workflow_runs"]
+            last = dt.datetime.fromisoformat(runs[0]["updated_at"].replace("Z", "+00:00")) if runs else None
+            _cloud_ok = bool(last) and dt.datetime.now(dt.timezone.utc) - last < dt.timedelta(minutes=20)
+        except (OSError, ValueError, KeyError) as e:
+            log(f"Pilve oleku kontroll ebaõnnestus: {e}")
+            _cloud_ok = False
+    return _cloud_ok
+
+
 def notify(cfg, title, message, url=None, priority=4, more=None):
     """url avaneb teavitusele klõpsates (ostuleht); more = (silt, url) on telefonis lisanupp."""
     log(f"TEAVITUS: {title} | {message}" + (f" | {url}" if url else ""))
@@ -155,6 +174,8 @@ def notify(cfg, title, message, url=None, priority=4, more=None):
         except (OSError, subprocess.SubprocessError) as e:
             log(f"Maci teavitus ebaõnnestus: {e}")
     topic = cfg.get("ntfy_topic")
+    if topic and cfg.get("cloud_repo") and cloud_running(cfg["cloud_repo"]):
+        topic = None  # telefoni saadab pilv, Mac ei tee topelt
     if topic:
         body = {"topic": topic, "title": title, "message": message,
                 "priority": priority, "tags": ["performing_arts"]}

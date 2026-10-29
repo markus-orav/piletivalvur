@@ -36,6 +36,7 @@ Töötav koopia asub kaustas `~/Library/Application Support/Piletivalvur/`, sest
   - `watch_titles`: `[]` = kõik lavastused; nt `["Hamlet", "Mets"]` – vabanenud piletitest ja üksikutest uutest etendustest teavitatakse ainult nende kohta
   - `quiet_hours`: selle aja sees ei kontrollita (vaikimisi 00–07); öised muutused tulevad hommikul
   - `mac_notifications`, `ntfy_topic` – kanalid
+  - `cloud_repo`: nt `"markus-orav/piletivalvur"` – Mac saadab telefoniteate ainult siis, kui selle repo ajastatud pilvekontroll pole viimase 20 min jooksul õnnestunud (varulahendus, ilma topeltteadeteta)
 - `piletivalvur.log` – kõik teavitused ja vead
 - `state.json` – viimati nähtud seis
 
@@ -55,7 +56,7 @@ Pärast `piletivalvur.py` muutmist siin kaustas käivita uuesti `./install.sh`, 
 
 Sama skript jookseb ka GitHub Actionsis töövoo [`.github/workflows/piletivalvur.yml`](.github/workflows/piletivalvur.yml) järgi, umbes iga 5 minuti järel ööpäev läbi.
 
-- **Telefoniteavitused saadab pilv.** Maci koopia näitab ainult Maci teavitusi, et telefoni ei tuleks iga teadet kaks korda.
+- **Telefoniteavitused saadab pilv.** Maci koopia saadab telefoni ainult siis, kui pilv seisab (`cloud_repo`), nii et sama teadet ei tule kaks korda.
 - Pilve seaded on failis `config.cloud.json`. ntfy teema on GitHubi saladuses `NTFY_TOPIC` ega satu avalikku reposse.
 - Vaikset aega pilves pole. Öösel vaigistab teavitused telefoni enda une- või fookusrežiim.
 - Seis (`state.json`) salvestatakse reposse ainult siis, kui midagi muutus.
