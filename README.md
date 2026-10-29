@@ -9,6 +9,12 @@ Kontrollib iga 5 minuti järel [Draamateatri mängukava](https://www.draamateate
 | Lisandub üksik etendus (nt lisaetendus) | etenduse kaupa |
 | Välja müüdud etendusele tekib „Osta pilet“ | „Vabanes pileteid!“ + otselink Piletimaailma |
 
+Teavitusele klõpsates avaneb ostuleht:
+- vabanenud piletite ja üksiku uue etenduse korral selle etenduse Piletimaailma ostuleht;
+- muudel juhtudel müügis olevate etenduste mängukava ([`?tickets=available`](https://www.draamateater.ee/mangukava/?tickets=available)).
+
+Telefonis on lisaks nupp „Osta pilet“ või „Müügis etendused“, uudiste puhul ka „Loe uudist“. Maci teavitused kasutavad `terminal-notifier`-it (`brew install terminal-notifier`), sest ilma selleta ei ava klõps linki.
+
 Müük avaneb tavaliselt **esmaspäeval kl 10**, kaks kuud korraga, umbes 3 kuud ette.
 
 ## Telefon (ntfy)
