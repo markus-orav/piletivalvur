@@ -48,4 +48,4 @@ EOF
 
 launchctl bootstrap "$DOMAIN" "$PLIST"
 echo "Piletivalvur töötab. Seaded: $DEST/config.json"
-echo "ntfy teema: $(/usr/bin/python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["ntfy_topic"])' "$DEST/config.json")"
+echo "ntfy teema: $(/usr/bin/python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["ntfy_topic"] or "– (telefoniteavitused saadab GitHub Actions)")' "$DEST/config.json")"
