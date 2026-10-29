@@ -1,0 +1,9 @@
+{
+ "mac_notifications": false,
+ "ntfy_server": "https://ntfy.sh",
+ "ntfy_topic": "",
+ "watch_titles": [],
+ "quiet_hours": [],
+ "batch_threshold": 5,
+ "renotify_minutes": 60
+}
