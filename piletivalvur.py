@@ -119,7 +119,9 @@ def fmt_perf(p):
 
 # --- teavitused ------------------------------------------------------------
 
-TERMINAL_NOTIFIER = next((p for p in ("/opt/homebrew/bin/terminal-notifier", "/usr/local/bin/terminal-notifier")
+# ~/Applications koopia on LaunchServicesis registreeritud – ainult nii lubab macOS sellel teavitusi saata
+TERMINAL_NOTIFIER = next((p for p in (str(Path.home() / "Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier"),
+                                      "/opt/homebrew/bin/terminal-notifier", "/usr/local/bin/terminal-notifier")
                           if Path(p).exists()), None)
 
 
@@ -136,7 +138,9 @@ def notify(cfg, title, message, url=None, priority=4, more=None):
                    "-e", 'display notification (item 2 of argv) with title (item 1 of argv) sound name "Glass"',
                    "-e", "end run", title, message]
         try:
-            subprocess.run(cmd, check=False, timeout=15, capture_output=True)
+            r = subprocess.run(cmd, check=False, timeout=15, capture_output=True, text=True)
+            if r.returncode:
+                log(f"Maci teavitus ebaõnnestus ({r.returncode}): {(r.stderr or r.stdout).strip()}")
         except (OSError, subprocess.SubprocessError) as e:
             log(f"Maci teavitus ebaõnnestus: {e}")
     topic = cfg.get("ntfy_topic")

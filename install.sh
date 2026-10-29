@@ -27,6 +27,19 @@ if [[ ! -f "$DEST/config.json" ]]; then
   sed "s/__NTFY_TOPIC__/$topic/" "$SRC/config.example.json" > "$DEST/config.json"
 fi
 
+# Klõpsatav Maci teavitus: terminal-notifier peab olema ~/Applications all registreeritud ja
+# luba tuleb esimesel korral küsida `open` kaudu (otse käivitades keeldub macOS luba küsimast).
+TN_SRC="$(brew --prefix terminal-notifier 2>/dev/null || true)/terminal-notifier.app"
+TN_APP="$HOME/Applications/terminal-notifier.app"
+if [[ -d "$TN_SRC" && ! -d "$TN_APP" ]]; then
+  mkdir -p "$HOME/Applications"
+  cp -R "$TN_SRC" "$TN_APP"
+  /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$TN_APP"
+fi
+if [[ -d "$TN_APP" ]] && ! "$TN_APP/Contents/MacOS/terminal-notifier" -diagnose 2>/dev/null | grep -q "authorization *authorized"; then
+  open -W -a "$TN_APP" --args -title "Piletivalvur" -message "Teavitused on lubatud." || true
+fi
+
 cat > "$PLIST" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
