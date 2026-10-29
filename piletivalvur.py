@@ -28,6 +28,7 @@ STATE_PATH = BASE / "state.json"
 LOG_PATH = BASE / "piletivalvur.log"
 
 KAVA_URL = "https://www.draamateater.ee/mangukava/"
+BUY_URL = KAVA_URL + "?tickets=available"  # mängukava ainult nende etendustega, millel on „Osta pilet“
 NEWS_URL = "https://www.draamateater.ee/wp-json/wp/v2/posts?per_page=10&_fields=id,date,title,link,excerpt"
 UA = "Piletivalvur/1.0 (isiklik piletiteavitus)"
 
@@ -118,23 +119,39 @@ def fmt_perf(p):
 
 # --- teavitused ------------------------------------------------------------
 
-def notify(cfg, title, message, url=None, priority=4):
+TERMINAL_NOTIFIER = next((p for p in ("/opt/homebrew/bin/terminal-notifier", "/usr/local/bin/terminal-notifier")
+                          if Path(p).exists()), None)
+
+
+def notify(cfg, title, message, url=None, priority=4, more=None):
+    """url avaneb teavitusele klõpsates (ostuleht); more = (silt, url) on telefonis lisanupp."""
     log(f"TEAVITUS: {title} | {message}" + (f" | {url}" if url else ""))
     if cfg.get("mac_notifications", True):
+        if TERMINAL_NOTIFIER:  # osascripti teavitus ei oska klõpsu peale linki avada
+            cmd = [TERMINAL_NOTIFIER, "-title", title, "-message", message, "-sound", "Glass"]
+            if url:
+                cmd += ["-open", url]
+        else:
+            cmd = ["osascript", "-e", "on run argv",
+                   "-e", 'display notification (item 2 of argv) with title (item 1 of argv) sound name "Glass"',
+                   "-e", "end run", title, message]
         try:
-            subprocess.run(
-                ["osascript", "-e", "on run argv",
-                 "-e", 'display notification (item 2 of argv) with title (item 1 of argv) sound name "Glass"',
-                 "-e", "end run", title, message],
-                check=False, timeout=15, capture_output=True)
+            subprocess.run(cmd, check=False, timeout=15, capture_output=True)
         except (OSError, subprocess.SubprocessError) as e:
             log(f"Maci teavitus ebaõnnestus: {e}")
     topic = cfg.get("ntfy_topic")
     if topic:
         body = {"topic": topic, "title": title, "message": message,
                 "priority": priority, "tags": ["performing_arts"]}
+        actions = []
         if url:
             body["click"] = url
+            label = "Osta pilet" if "piletimaailm" in url else "Müügis etendused"
+            actions.append({"action": "view", "label": label, "url": url})
+        if more:
+            actions.append({"action": "view", "label": more[0], "url": more[1]})
+        if actions:
+            body["actions"] = actions
         try:
             req = urllib.request.Request(
                 cfg.get("ntfy_server", "https://ntfy.sh").rstrip("/"),
@@ -218,7 +235,7 @@ def check_kava(cfg, state, now):
         buy = sum(p["status"] == "buy" for p in new_on_sale)
         notify(cfg, "Draamateater: uued etendused müügis!",
                f"Mängukavva lisandus {len(new_on_sale)} etendust ({month_span(new_on_sale)}), "
-               f"neist {buy} kohe müügis.", KAVA_URL, 5)
+               f"neist {buy} kohe müügis.", BUY_URL, 5)
     else:
         for p in new_on_sale:
             if not watched(cfg, p["title"]):
@@ -281,7 +298,7 @@ def check_news(cfg, state, now):
             reminders[pid] = {"title": title, "sale": sale.isoformat(), "link": post["link"], "sent": []}
         if not first_run:
             msg = excerpt[:220] + ("…" if len(excerpt) > 220 else "")
-            notify(cfg, f"Draamateater: {title}", msg, post["link"], 5)
+            notify(cfg, f"Draamateater: {title}", msg, BUY_URL, 5, ("Loe uudist", post["link"]))
     state["seen_news"] = sorted(seen, key=int)[-50:]
 
     for pid, r in list(reminders.items()):
@@ -294,10 +311,10 @@ def check_news(cfg, state, now):
         when = f"{'ETKNRLP'[sale.weekday()]} {sale.day}.{sale.month} kl {sale:%H:%M}"
         if now >= soon and "soon" not in r["sent"]:
             r["sent"] += ["eve", "soon"]
-            notify(cfg, "Piletimüük algab 15 min pärast!", f"{r['title']} ({when})", KAVA_URL, 5)
+            notify(cfg, "Piletimüük algab 15 min pärast!", f"{r['title']} ({when})", BUY_URL, 5)
         elif now >= eve and "eve" not in r["sent"]:
             r["sent"].append("eve")
-            notify(cfg, "Homme algab piletimüük", f"{r['title']} ({when})", r["link"], 4)
+            notify(cfg, "Homme algab piletimüük", f"{r['title']} ({when})", BUY_URL, 4, ("Loe uudist", r["link"]))
 
 
 # --- käivitus --------------------------------------------------------------
@@ -339,7 +356,7 @@ def main():
     args = ap.parse_args()
     if args.test:
         cfg = load_config()
-        notify(cfg, "Piletivalvur töötab", "Nii näeb välja Draamateatri piletiteavitus.", KAVA_URL)
+        notify(cfg, "Piletivalvur töötab", "Klõpsa – avaneb müügis olevate etenduste leht.", BUY_URL)
     elif args.status:
         status()
     else:
