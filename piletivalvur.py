@@ -42,6 +42,7 @@ DEFAULT_CONFIG = {
     "quiet_hours": ["00:00", "07:00"],
     "batch_threshold": 5,        # nii mitu uut etendust korraga = üks koondteavitus
     "renotify_minutes": 60,      # sama etenduse vabanemisest ei teavita tihedamini
+    "confirm_minutes": 4,        # vabanenud pilet peab nii kaua müügis püsima (järgmine kontroll), enne kui teavitame
     "cloud_repo": "",            # nt "kasutaja/piletivalvur": ntfy ainult siis, kui selle repo pilvekontroll seisab
 }
 
@@ -328,7 +329,21 @@ def check_kava(cfg, th, ts, now):
     threshold = cfg.get("batch_threshold", 5)
     added = [p for k, p in perfs.items() if k not in old and p["date"] >= today]
     opened = [p for k, p in perfs.items() if k in old and old[k]["status"] == "other" and p["status"] == "buy"]
-    freed = [(k, p) for k, p in perfs.items() if k in old and old[k]["status"] == "soldout" and p["status"] == "buy"]
+    # Mängukavad näitavad välja müüdud etendust vahel paar minutit müügis olevana (kohti tegelikult pole),
+    # seega teavitame alles siis, kui „Osta pilet“ püsib ka järgmisel kontrollil.
+    pending, new_pending, freed = ts.get("freed_pending", {}), {}, []
+    confirm_after = dt.timedelta(minutes=cfg.get("confirm_minutes", 4))
+    for k, p in perfs.items():
+        if p["status"] != "buy" or k not in old:
+            continue
+        if k in pending:
+            if now - dt.datetime.fromisoformat(pending[k]) >= confirm_after:
+                freed.append((k, p))
+            else:
+                new_pending[k] = pending[k]
+        elif old[k]["status"] == "soldout":
+            new_pending[k] = now.isoformat()
+    ts["freed_pending"] = new_pending
     if cfg.get("freed_only"):
         added = opened = []
 
