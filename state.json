@@ -1,27 +1,9 @@
 {
- "last_check": "2026-11-02T11:19:00",
+ "last_check": "2026-11-02T11:34:00",
  "theaters": {
   "linnateater": {
    "reminders": {},
    "perfs": {
-    "2026-11-10 19:00 Avamine": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Avamine",
-     "venue": "Kammersaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-02 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
-     "date": "2026-12-02",
-     "time": "19:00",
-     "title": "Käitumisreeglid tänapäeva ühiskonnas",
-     "venue": "Hobuveski",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2026-12-11 19:00 Vaikus": {
      "date": "2026-12-11",
      "time": "19:00",
@@ -153,6 +135,24 @@
      "time": "19:00",
      "title": "Uskuja",
      "venue": "Taevasaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-10 19:00 Avamine": {
+     "date": "2026-11-10",
+     "time": "19:00",
+     "title": "Avamine",
+     "venue": "Kammersaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-02 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
+     "date": "2026-12-02",
+     "time": "19:00",
+     "title": "Käitumisreeglid tänapäeva ühiskonnas",
+     "venue": "Hobuveski",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -310,15 +310,6 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-16 19:00 Nõusolek": {
-     "date": "2026-11-16",
-     "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2026-11-05 19:00 Kolemees": {
      "date": "2026-11-05",
      "time": "19:00",
@@ -451,8 +442,8 @@
      "title": "Käitumisreeglid tänapäeva ühiskonnas",
      "venue": "Hobuveski",
      "desc": "",
-     "status": "buy",
-     "url": "https://store.piletilevi.ee/public/?concert=507315&shop_provider=tlt&design=tlt&lang=est&center=7"
+     "status": "soldout",
+     "url": null
     },
     "2026-11-14 19:00 Ülestähendusi põranda alt": {
      "date": "2026-11-14",
@@ -499,20 +490,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-05 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
-     "date": "2026-11-05",
+    "2026-11-16 19:00 Nõusolek": {
+     "date": "2026-11-16",
      "time": "19:00",
-     "title": "Käitumisreeglid tänapäeva ühiskonnas",
-     "venue": "Hobuveski",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-24 19:00 Annapurna": {
-     "date": "2026-11-24",
-     "time": "19:00",
-     "title": "Annapurna",
-     "venue": "Väike saal",
+     "title": "Nõusolek",
+     "venue": "Must saal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -586,8 +568,8 @@
      "title": "Uskuja",
      "venue": "Taevasaal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://store.piletilevi.ee/public/?concert=507299&shop_provider=tlt&design=tlt&lang=est&center=7"
     },
     "2026-11-07 19:00 Karussell": {
      "date": "2026-11-07",
@@ -666,6 +648,24 @@
      "time": "19:00",
      "title": "Nachtland",
      "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-05 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
+     "date": "2026-11-05",
+     "time": "19:00",
+     "title": "Käitumisreeglid tänapäeva ühiskonnas",
+     "venue": "Hobuveski",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-24 19:00 Annapurna": {
+     "date": "2026-11-24",
+     "time": "19:00",
+     "title": "Annapurna",
+     "venue": "Väike saal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -796,15 +796,6 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-11 19:00 Uskuja": {
-     "date": "2026-12-11",
-     "time": "19:00",
-     "title": "Uskuja",
-     "venue": "Taevasaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2026-11-27 19:00 Annapurna": {
      "date": "2026-11-27",
      "time": "19:00",
@@ -820,8 +811,8 @@
      "title": "Suur veeuputus",
      "venue": "Suur saal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://store.piletilevi.ee/public/?concert=510947&shop_provider=tlt&design=tlt&lang=est&center=7"
     },
     "2026-12-01 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
      "date": "2026-12-01",
@@ -913,6 +904,15 @@
      "status": "soldout",
      "url": null
     },
+    "2026-12-11 19:00 Uskuja": {
+     "date": "2026-12-11",
+     "time": "19:00",
+     "title": "Uskuja",
+     "venue": "Taevasaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
     "2026-12-05 19:00 Muusikale": {
      "date": "2026-12-05",
      "time": "19:00",
@@ -957,6 +957,10 @@
     "2026-11-28 19:00 Suur veeuputus": "2026-10-30T16:42:00",
     "2026-12-05 19:00 Suur veeuputus": "2026-10-31T16:52:00",
     "2026-11-04 19:00 Käitumisreeglid tänapäeva ühiskonnas": "2026-11-02T11:19:00"
+   },
+   "freed_pending": {
+    "2026-11-02 19:00 Uskuja": "2026-11-02T11:34:00",
+    "2026-11-28 19:00 Suur veeuputus": "2026-11-02T11:34:00"
    }
   },
   "draamateater": {
@@ -1823,8 +1827,8 @@
      "title": "Prima facie",
      "venue": "väike saal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://www.piletimaailm.com/performances/155018/buy?lang=et"
     },
     "2027-01-12 19:00 Solist": {
      "date": "2027-01-12",
@@ -1850,8 +1854,8 @@
      "title": "Prima facie",
      "venue": "väike saal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://www.piletimaailm.com/performances/155019/buy?lang=et"
     },
     "2027-01-13 19:00 Solist": {
      "date": "2027-01-13",
@@ -2201,8 +2205,8 @@
      "title": "Erakõnelused",
      "venue": "väike saal",
      "desc": "",
-     "status": "buy",
-     "url": "https://www.piletimaailm.com/performances/154983/buy?lang=et"
+     "status": "soldout",
+     "url": null
     },
     "2027-02-04 19:00 Hamlet": {
      "date": "2027-02-04",
@@ -2210,8 +2214,8 @@
      "title": "Hamlet",
      "venue": "suur saal",
      "desc": "",
-     "status": "buy",
-     "url": "https://www.piletimaailm.com/performances/154988/buy?lang=et"
+     "status": "soldout",
+     "url": null
     },
     "2027-02-04 19:00 Võõrad": {
      "date": "2027-02-04",
@@ -2300,8 +2304,8 @@
      "title": "12 vihast meest",
      "venue": "suur saal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://www.piletimaailm.com/performances/154960/buy?lang=et"
     },
     "2027-02-10 19:00 Ühe naise võitlused ja metamorfoosid": {
      "date": "2027-02-10",
@@ -2327,8 +2331,8 @@
      "title": "12 vihast meest",
      "venue": "suur saal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://www.piletimaailm.com/performances/154961/buy?lang=et"
     },
     "2027-02-11 19:00 Ühe naise võitlused ja metamorfoosid": {
      "date": "2027-02-11",
@@ -2363,8 +2367,8 @@
      "title": "Prima facie",
      "venue": "väike saal",
      "desc": "",
-     "status": "soldout",
-     "url": null
+     "status": "buy",
+     "url": "https://www.piletimaailm.com/performances/155022/buy?lang=et"
     },
     "2027-02-13 19:00 Eneseabiõpik": {
      "date": "2027-02-13",
@@ -2556,7 +2560,14 @@
      "url": null
     }
    },
-   "freed_notified": {}
+   "freed_notified": {},
+   "freed_pending": {
+    "2027-01-12 19:00 Prima facie": "2026-11-02T11:34:00",
+    "2027-01-13 19:00 Prima facie": "2026-11-02T11:34:00",
+    "2027-02-10 19:00 12 vihast meest": "2026-11-02T11:34:00",
+    "2027-02-11 19:00 12 vihast meest": "2026-11-02T11:34:00",
+    "2027-02-12 19:00 Prima facie": "2026-11-02T11:34:00"
+   }
   }
  }
 }
