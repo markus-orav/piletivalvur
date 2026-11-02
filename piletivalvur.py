@@ -19,6 +19,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.request
 from pathlib import Path
 
@@ -42,7 +43,7 @@ DEFAULT_CONFIG = {
     "quiet_hours": ["00:00", "07:00"],
     "batch_threshold": 5,        # nii mitu uut etendust korraga = üks koondteavitus
     "renotify_minutes": 60,      # sama etenduse vabanemisest ei teavita tihedamini
-    "confirm_minutes": 4,        # vabanenud pilet peab nii kaua müügis püsima (järgmine kontroll), enne kui teavitame
+    "confirm_minutes": 2,        # vabanenud pilet peab nii kaua müügis püsima (korduskontroll), enne kui teavitame
     "cloud_repo": "",            # nt "kasutaja/piletivalvur": ntfy ainult siis, kui selle repo pilvekontroll seisab
 }
 
@@ -330,9 +331,9 @@ def check_kava(cfg, th, ts, now):
     added = [p for k, p in perfs.items() if k not in old and p["date"] >= today]
     opened = [p for k, p in perfs.items() if k in old and old[k]["status"] == "other" and p["status"] == "buy"]
     # Mängukavad näitavad välja müüdud etendust vahel paar minutit müügis olevana (kohti tegelikult pole),
-    # seega teavitame alles siis, kui „Osta pilet“ püsib ka järgmisel kontrollil.
+    # seega teavitame alles siis, kui „Osta pilet“ püsib ka confirm_minutes hiljem (run() kontrollib kohe uuesti).
     pending, new_pending, freed = ts.get("freed_pending", {}), {}, []
-    confirm_after = dt.timedelta(minutes=cfg.get("confirm_minutes", 4))
+    confirm_after = dt.timedelta(minutes=cfg.get("confirm_minutes", 2))
     for k, p in perfs.items():
         if p["status"] != "buy" or k not in old:
             continue
@@ -476,6 +477,7 @@ def run(force=False):
         return
     state = load_json(STATE_PATH, {})
     active = cfg.get("theaters") or list(THEATERS)
+    rechecks = []
     # pausil teatri seis unustatakse, et jätkamisel ei tuleks pausiaja muutuste kohta teateid
     for tid in [t for t in state.get("theaters", {}) if t not in active]:
         del state["theaters"][tid]
@@ -497,8 +499,21 @@ def run(force=False):
                 check(tcfg, th, ts, now)
             except Exception as e:  # võrgukatkestus vms – proovime järgmisel korral uuesti
                 log(f"{th['name']} {step}: viga {type(e).__name__}: {e}")
+        if ts.get("freed_pending"):
+            rechecks.append((tcfg, th, ts))
     state["last_check"] = now.isoformat()
     save_json(STATE_PATH, state)
+    # vabanenud piletite kinnitamiseks ei oota järgmist käivitust (~5 min), vaid kontrollime kohe uuesti
+    if rechecks:
+        time.sleep(cfg.get("confirm_minutes", 2) * 60)
+        now = dt.datetime.now().replace(second=0, microsecond=0)
+        for tcfg, th, ts in rechecks:
+            try:
+                check_kava(tcfg, th, ts, now)
+            except Exception as e:
+                log(f"{th['name']} kinnitus: viga {type(e).__name__}: {e}")
+        state["last_check"] = now.isoformat()
+        save_json(STATE_PATH, state)
 
 
 def status():

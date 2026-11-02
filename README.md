@@ -8,7 +8,7 @@ Kontrollib iga 5 minuti järel Eesti Draamateatri ja Tallinna Linnateatri mängu
 | Mängukavva lisandub ≥5 etendust (uus müügiperiood) | üks koondteavitus |
 | Lisandub üksik etendus (nt lisaetendus) | etenduse kaupa |
 | Müük avaneb (Linnateatris „Müük algab …“ → „Osta pilet“) | koondteavitus või etenduse kaupa |
-| Välja müüdud etendusele tekib „Osta pilet“ ja see püsib ka järgmisel kontrollil (~5 min) | „Vabanes pileteid!“ + otselink ostulehele |
+| Välja müüdud etendusele tekib „Osta pilet“ ja see püsib ka 2 min hiljem tehtud kordusel | „Vabanes pileteid!“ + otselink ostulehele |
 
 | | Draamateater | Linnateater |
 |---|---|---|
@@ -69,6 +69,6 @@ Sama skript jookseb ka GitHub Actionsis töövoo [`.github/workflows/piletivalvu
 
 - Maci koopia töötab ainult siis, kui Mac on ärkvel. Unest ärgates tehakse kontroll kohe.
 - Piletimaailma ja Piletilevi lehti otse ei loeta. Seisu võetakse teatri enda mängukavast, mis võib piletimüüjast mõne minuti maha jääda.
-- Mõlema teatri mängukava näitab välja müüdud etendust vahel paar minutit müügis olevana, kuigi kohti pole (nt teise ostja korvist naasnud ja kohe uuesti võetud kohad). Seetõttu teavitatakse vabanemisest alles siis, kui „Osta pilet“ püsib ka järgmisel kontrollil (`confirm_minutes`, vaikimisi 4 min). Pilv kontrollib harva, nii et vabanemisi märkab praktiliselt ainult ärkvel Mac.
+- Mõlema teatri mängukava näitab välja müüdud etendust vahel paar minutit müügis olevana, kuigi kohti pole (nt teise ostja korvist naasnud ja kohe uuesti võetud kohad). Seetõttu kontrollib skript vabanenud etendust `confirm_minutes` (vaikimisi 2 min) pärast uuesti ja teavitab ainult siis, kui „Osta pilet“ on endiselt alles. Linnateatri `shows.json` uueneb iga minuti järel, nii et kordus näeb alati värsket seisu.
 - Vabanenud pilet võib kiiresti uuesti ära minna, seega reageeri teavitusele kohe.
 - Skript ei osta pileteid ise, ost jääb sinu teha.
