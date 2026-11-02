@@ -34,6 +34,7 @@ Töötav koopia asub kaustas `~/Library/Application Support/Piletivalvur/`, sest
 - `config.json` – seaded (muudatus hakkab kehtima järgmisel kontrollil)
   - `theaters`: jälgitavad teatrid, vaikimisi `["draamateater", "linnateater"]`
   - `watch_titles`: `[]` = kõik lavastused; nt `["Hamlet", "Mets"]` – vabanenud piletitest ja üksikutest uutest etendustest teavitatakse ainult nende kohta
+  - `only_freed`: teatripõhine kitsendus, nt `{"draamateater": ["Lehman Brothers", "Ükskord Liibanonis"]}` – sellest teatrist tuleb ainult nende lavastuste „Vabanes pileteid!“ (uued etendused, müügi algus ja uudised jäävad vahele); `[]` = kõigi lavastuste vabanenud piletid. Praegu kehtib Draamateatrile nii Maci kui ka pilve seadetes.
   - `quiet_hours`: selle aja sees ei kontrollita (vaikimisi 00–07); öised muutused tulevad hommikul
   - `mac_notifications`, `ntfy_topic` – kanalid
   - `cloud_repo`: nt `"markus-orav/piletivalvur"` – Mac saadab telefoniteate ainult siis, kui selle repo ajastatud pilvekontroll pole viimase 20 min jooksul õnnestunud (varulahendus, ilma topeltteadeteta)

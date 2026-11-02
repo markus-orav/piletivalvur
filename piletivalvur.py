@@ -38,6 +38,7 @@ DEFAULT_CONFIG = {
     "ntfy_server": "https://ntfy.sh",
     "ntfy_topic": "",
     "watch_titles": [],          # tühi = kõik lavastused; muidu alamstringid, nt ["Hamlet", "Mets"]
+    "only_freed": {},            # nt {"draamateater": ["Hamlet"]}: sellest teatrist ainult nende lavastuste vabanenud piletid
     "quiet_hours": ["00:00", "07:00"],
     "batch_threshold": 5,        # nii mitu uut etendust korraga = üks koondteavitus
     "renotify_minutes": 60,      # sama etenduse vabanemisest ei teavita tihedamini
@@ -328,6 +329,8 @@ def check_kava(cfg, th, ts, now):
     added = [p for k, p in perfs.items() if k not in old and p["date"] >= today]
     opened = [p for k, p in perfs.items() if k in old and old[k]["status"] == "other" and p["status"] == "buy"]
     freed = [(k, p) for k, p in perfs.items() if k in old and old[k]["status"] == "soldout" and p["status"] == "buy"]
+    if cfg.get("freed_only"):
+        added = opened = []
 
     if len(added) >= threshold:
         buy = sum(p["status"] == "buy" for p in added)
@@ -468,9 +471,15 @@ def run(force=False):
             log(f"Tundmatu teater seadetes: {tid}")
             continue
         ts = theater_state(state, tid)
-        for step, check in (("mängukava", check_kava), ("uudised", check_news), ("meeldetuletused", send_reminders)):
+        steps = (("mängukava", check_kava), ("uudised", check_news), ("meeldetuletused", send_reminders))
+        tcfg = cfg
+        only = (cfg.get("only_freed") or {}).get(tid)
+        if only is not None:  # ainult valitud lavastuste vabanenud piletid: uudised ja müügi algus vahele
+            tcfg = {**cfg, "watch_titles": only, "freed_only": True}
+            steps = steps[:1]
+        for step, check in steps:
             try:
-                check(cfg, th, ts, now)
+                check(tcfg, th, ts, now)
             except Exception as e:  # võrgukatkestus vms – proovime järgmisel korral uuesti
                 log(f"{th['name']} {step}: viga {type(e).__name__}: {e}")
     state["last_check"] = now.isoformat()
@@ -479,9 +488,12 @@ def run(force=False):
 
 def status():
     state = load_json(STATE_PATH, {})
+    only_freed = load_config().get("only_freed") or {}
     print(f"Viimane kontroll: {state.get('last_check', '–')}")
     for tid, ts in state.get("theaters", {}).items():
         print(THEATERS[tid]["name"] if tid in THEATERS else tid)
+        if tid in only_freed:
+            print(f"  Teavitab ainult vabanenud piletitest: {', '.join(only_freed[tid]) or 'kõik lavastused'}")
         by_month = {}
         for p in ts.get("perfs", {}).values():
             b = by_month.setdefault(p["date"][:7], [0, 0])
