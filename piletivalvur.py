@@ -457,7 +457,12 @@ def run(force=False):
     if not force and in_quiet_hours(cfg, now):
         return
     state = load_json(STATE_PATH, {})
-    for tid in cfg.get("theaters") or list(THEATERS):
+    active = cfg.get("theaters") or list(THEATERS)
+    # pausil teatri seis unustatakse, et jätkamisel ei tuleks pausiaja muutuste kohta teateid
+    for tid in [t for t in state.get("theaters", {}) if t not in active]:
+        del state["theaters"][tid]
+        log(f"{THEATERS.get(tid, {}).get('name', tid)} on pausil")
+    for tid in active:
         th = THEATERS.get(tid)
         if not th:
             log(f"Tundmatu teater seadetes: {tid}")
