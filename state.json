@@ -1,20 +1,11 @@
 {
- "last_check": "2026-11-10T17:47:00",
+ "last_check": "2026-11-10T23:27:00",
  "theaters": {
   "linnateater": {
    "reminders": {},
    "perfs": {
-    "2026-12-12 19:00 Vaikus": {
-     "date": "2026-12-12",
-     "time": "19:00",
-     "title": "Vaikus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-14 19:00 Tõeline Lääs": {
-     "date": "2026-12-14",
+    "2026-12-16 19:00 Tõeline Lääs": {
+     "date": "2026-12-16",
      "time": "19:00",
      "title": "Tõeline Lääs",
      "venue": "Väike saal",
@@ -22,10 +13,46 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-14 19:00 Alguses oli laul": {
-     "date": "2026-12-14",
+    "2026-12-17 19:00 Ülestähendusi põranda alt": {
+     "date": "2026-12-17",
      "time": "19:00",
-     "title": "Alguses oli laul",
+     "title": "Ülestähendusi põranda alt",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-17 19:00 Avamine": {
+     "date": "2026-12-17",
+     "time": "19:00",
+     "title": "Avamine",
+     "venue": "Kammersaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-17 19:00 Suur veeuputus": {
+     "date": "2026-12-17",
+     "time": "19:00",
+     "title": "Suur veeuputus",
+     "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-18 19:00 Avamine": {
+     "date": "2026-12-18",
+     "time": "19:00",
+     "title": "Avamine",
+     "venue": "Kammersaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-18 19:00 Suur veeuputus": {
+     "date": "2026-12-18",
+     "time": "19:00",
+     "title": "Suur veeuputus",
      "venue": "Suur saal",
      "desc": "",
      "status": "soldout",
@@ -40,29 +67,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-07 19:00 Orvud": {
-     "date": "2026-12-07",
-     "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2026-12-15 19:00 Tõeline Lääs": {
      "date": "2026-12-15",
      "time": "19:00",
      "title": "Tõeline Lääs",
      "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-07 19:00 Alguses oli laul": {
-     "date": "2026-12-07",
-     "time": "19:00",
-     "title": "Alguses oli laul",
-     "venue": "Suur saal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -85,10 +94,10 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-16 19:00 Tõeline Lääs": {
-     "date": "2026-12-16",
+    "2026-12-01 19:00 Orvud": {
+     "date": "2026-12-01",
      "time": "19:00",
-     "title": "Tõeline Lääs",
+     "title": "Orvud",
      "venue": "Väike saal",
      "desc": "",
      "status": "soldout",
@@ -96,231 +105,6 @@
     },
     "2026-12-08 19:00 Orvud": {
      "date": "2026-12-08",
-     "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-17 19:00 Ülestähendusi põranda alt": {
-     "date": "2026-12-17",
-     "time": "19:00",
-     "title": "Ülestähendusi põranda alt",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-09 19:00 Orvud": {
-     "date": "2026-12-09",
-     "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-17 19:00 Avamine": {
-     "date": "2026-12-17",
-     "time": "19:00",
-     "title": "Avamine",
-     "venue": "Kammersaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-09 19:00 EXIT!": {
-     "date": "2026-12-09",
-     "time": "19:00",
-     "title": "EXIT!",
-     "venue": "Võlvsaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-17 19:00 Suur veeuputus": {
-     "date": "2026-12-17",
-     "time": "19:00",
-     "title": "Suur veeuputus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-09 19:00 Ülestähendusi põranda alt": {
-     "date": "2026-12-09",
-     "time": "19:00",
-     "title": "Ülestähendusi põranda alt",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-18 19:00 Avamine": {
-     "date": "2026-12-18",
-     "time": "19:00",
-     "title": "Avamine",
-     "venue": "Kammersaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-10 19:00 Vaikus": {
-     "date": "2026-12-10",
-     "time": "19:00",
-     "title": "Vaikus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-18 19:00 Suur veeuputus": {
-     "date": "2026-12-18",
-     "time": "19:00",
-     "title": "Suur veeuputus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-10 19:00 Uskuja": {
-     "date": "2026-12-10",
-     "time": "19:00",
-     "title": "Uskuja",
-     "venue": "Taevasaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-11 19:00 Uskuja": {
-     "date": "2026-12-11",
-     "time": "19:00",
-     "title": "Uskuja",
-     "venue": "Taevasaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-11 19:00 Vaikus": {
-     "date": "2026-12-11",
-     "time": "19:00",
-     "title": "Vaikus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-12 19:00 Uskuja": {
-     "date": "2026-12-12",
-     "time": "19:00",
-     "title": "Uskuja",
-     "venue": "Taevasaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-26 19:00 Muusikale": {
-     "date": "2026-11-26",
-     "time": "19:00",
-     "title": "Muusikale",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-04 19:00 Südameharjutus": {
-     "date": "2026-12-04",
-     "time": "19:00",
-     "title": "Südameharjutus",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-26 19:00 Annapurna": {
-     "date": "2026-11-26",
-     "time": "19:00",
-     "title": "Annapurna",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-04 19:00 Muusikale": {
-     "date": "2026-12-04",
-     "time": "19:00",
-     "title": "Muusikale",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-27 19:00 Annapurna": {
-     "date": "2026-11-27",
-     "time": "19:00",
-     "title": "Annapurna",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-05 19:00 Muusikale": {
-     "date": "2026-12-05",
-     "time": "19:00",
-     "title": "Muusikale",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-27 19:00 Muusikale": {
-     "date": "2026-11-27",
-     "time": "19:00",
-     "title": "Muusikale",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-05 19:00 Suur veeuputus": {
-     "date": "2026-12-05",
-     "time": "19:00",
-     "title": "Suur veeuputus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-27 19:00 Novecento": {
-     "date": "2026-11-27",
-     "time": "19:00",
-     "title": "Novecento",
-     "venue": "Hobuveski",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-28 19:00 Suur veeuputus": {
-     "date": "2026-11-28",
-     "time": "19:00",
-     "title": "Suur veeuputus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-01 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
-     "date": "2026-12-01",
-     "time": "19:00",
-     "title": "Käitumisreeglid tänapäeva ühiskonnas",
-     "venue": "Hobuveski",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-01 19:00 Orvud": {
-     "date": "2026-12-01",
      "time": "19:00",
      "title": "Orvud",
      "venue": "Väike saal",
@@ -337,8 +121,26 @@
      "status": "soldout",
      "url": null
     },
+    "2026-12-09 19:00 Orvud": {
+     "date": "2026-12-09",
+     "time": "19:00",
+     "title": "Orvud",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
     "2026-12-01 19:00 EXIT!": {
      "date": "2026-12-01",
+     "time": "19:00",
+     "title": "EXIT!",
+     "venue": "Võlvsaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-09 19:00 EXIT!": {
+     "date": "2026-12-09",
      "time": "19:00",
      "title": "EXIT!",
      "venue": "Võlvsaal",
@@ -355,6 +157,15 @@
      "status": "soldout",
      "url": null
     },
+    "2026-12-09 19:00 Ülestähendusi põranda alt": {
+     "date": "2026-12-09",
+     "time": "19:00",
+     "title": "Ülestähendusi põranda alt",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
     "2026-12-02 19:00 Sinisilmsed": {
      "date": "2026-12-02",
      "time": "19:00",
@@ -364,11 +175,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-23 19:00 Nõusolek": {
-     "date": "2026-11-23",
+    "2026-12-10 19:00 Vaikus": {
+     "date": "2026-12-10",
      "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
+     "title": "Vaikus",
+     "venue": "Suur saal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -382,11 +193,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-24 19:00 Annapurna": {
-     "date": "2026-11-24",
+    "2026-12-10 19:00 Uskuja": {
+     "date": "2026-12-10",
      "time": "19:00",
-     "title": "Annapurna",
-     "venue": "Väike saal",
+     "title": "Uskuja",
+     "venue": "Taevasaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -400,11 +211,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-24 19:00 Nõusolek": {
-     "date": "2026-11-24",
+    "2026-12-11 19:00 Uskuja": {
+     "date": "2026-12-11",
      "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
+     "title": "Uskuja",
+     "venue": "Taevasaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -418,11 +229,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-25 19:00 Nõusolek": {
-     "date": "2026-11-25",
+    "2026-12-11 19:00 Vaikus": {
+     "date": "2026-12-11",
      "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
+     "title": "Vaikus",
+     "venue": "Suur saal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -436,35 +247,80 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-17 19:00 Orvud": {
-     "date": "2026-11-17",
+    "2026-12-12 19:00 Uskuja": {
+     "date": "2026-12-12",
      "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-17 19:00 Nõusolek": {
-     "date": "2026-11-17",
-     "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-18 19:00 Öö": {
-     "date": "2026-11-18",
-     "time": "19:00",
-     "title": "Öö",
+     "title": "Uskuja",
      "venue": "Taevasaal",
      "desc": "",
      "status": "soldout",
      "url": null
     },
-    "2026-11-18 19:00 Orvud": {
-     "date": "2026-11-18",
+    "2026-12-04 19:00 Südameharjutus": {
+     "date": "2026-12-04",
+     "time": "19:00",
+     "title": "Südameharjutus",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-12 19:00 Vaikus": {
+     "date": "2026-12-12",
+     "time": "19:00",
+     "title": "Vaikus",
+     "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-04 19:00 Muusikale": {
+     "date": "2026-12-04",
+     "time": "19:00",
+     "title": "Muusikale",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-14 19:00 Tõeline Lääs": {
+     "date": "2026-12-14",
+     "time": "19:00",
+     "title": "Tõeline Lääs",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-05 19:00 Muusikale": {
+     "date": "2026-12-05",
+     "time": "19:00",
+     "title": "Muusikale",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-14 19:00 Alguses oli laul": {
+     "date": "2026-12-14",
+     "time": "19:00",
+     "title": "Alguses oli laul",
+     "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-05 19:00 Suur veeuputus": {
+     "date": "2026-12-05",
+     "time": "19:00",
+     "title": "Suur veeuputus",
+     "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-07 19:00 Orvud": {
+     "date": "2026-12-07",
      "time": "19:00",
      "title": "Orvud",
      "venue": "Väike saal",
@@ -472,21 +328,12 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-18 19:00 Nõusolek": {
-     "date": "2026-11-18",
+    "2026-12-07 19:00 Alguses oli laul": {
+     "date": "2026-12-07",
      "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-19 18:00 Nachtland": {
-     "date": "2026-11-19",
-     "time": "18:00",
-     "title": "Nachtland",
+     "title": "Alguses oli laul",
      "venue": "Suur saal",
-     "desc": "NB! Etendus algab kell 18",
+     "desc": "",
      "status": "soldout",
      "url": null
     },
@@ -494,6 +341,15 @@
      "date": "2026-11-19",
      "time": "19:00",
      "title": "Novecento",
+     "venue": "Hobuveski",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-01 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
+     "date": "2026-12-01",
+     "time": "19:00",
+     "title": "Käitumisreeglid tänapäeva ühiskonnas",
      "venue": "Hobuveski",
      "desc": "",
      "status": "soldout",
@@ -535,8 +391,170 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-14 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
-     "date": "2026-11-14",
+    "2026-11-23 19:00 Annapurna": {
+     "date": "2026-11-23",
+     "time": "19:00",
+     "title": "Annapurna",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-23 19:00 Nõusolek": {
+     "date": "2026-11-23",
+     "time": "19:00",
+     "title": "Nõusolek",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-24 19:00 Annapurna": {
+     "date": "2026-11-24",
+     "time": "19:00",
+     "title": "Annapurna",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-24 19:00 Nõusolek": {
+     "date": "2026-11-24",
+     "time": "19:00",
+     "title": "Nõusolek",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-17 19:00 Öö": {
+     "date": "2026-11-17",
+     "time": "19:00",
+     "title": "Öö",
+     "venue": "Taevasaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-25 19:00 Nõusolek": {
+     "date": "2026-11-25",
+     "time": "19:00",
+     "title": "Nõusolek",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-17 19:00 Orvud": {
+     "date": "2026-11-17",
+     "time": "19:00",
+     "title": "Orvud",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-26 19:00 Muusikale": {
+     "date": "2026-11-26",
+     "time": "19:00",
+     "title": "Muusikale",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-17 19:00 Nõusolek": {
+     "date": "2026-11-17",
+     "time": "19:00",
+     "title": "Nõusolek",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-26 19:00 Annapurna": {
+     "date": "2026-11-26",
+     "time": "19:00",
+     "title": "Annapurna",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-18 19:00 Öö": {
+     "date": "2026-11-18",
+     "time": "19:00",
+     "title": "Öö",
+     "venue": "Taevasaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-27 19:00 Annapurna": {
+     "date": "2026-11-27",
+     "time": "19:00",
+     "title": "Annapurna",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-18 19:00 Orvud": {
+     "date": "2026-11-18",
+     "time": "19:00",
+     "title": "Orvud",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-27 19:00 Muusikale": {
+     "date": "2026-11-27",
+     "time": "19:00",
+     "title": "Muusikale",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-18 19:00 Nõusolek": {
+     "date": "2026-11-18",
+     "time": "19:00",
+     "title": "Nõusolek",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-27 19:00 Novecento": {
+     "date": "2026-11-27",
+     "time": "19:00",
+     "title": "Novecento",
+     "venue": "Hobuveski",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-19 18:00 Nachtland": {
+     "date": "2026-11-19",
+     "time": "18:00",
+     "title": "Nachtland",
+     "venue": "Suur saal",
+     "desc": "NB! Etendus algab kell 18",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-28 19:00 Suur veeuputus": {
+     "date": "2026-11-28",
+     "time": "19:00",
+     "title": "Suur veeuputus",
+     "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-13 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
+     "date": "2026-11-13",
      "time": "19:00",
      "title": "Käitumisreeglid tänapäeva ühiskonnas",
      "venue": "Hobuveski",
@@ -544,11 +562,47 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-23 19:00 Annapurna": {
-     "date": "2026-11-23",
+    "2026-11-13 19:00 EXIT!": {
+     "date": "2026-11-13",
      "time": "19:00",
-     "title": "Annapurna",
-     "venue": "Väike saal",
+     "title": "EXIT!",
+     "venue": "Võlvsaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-14 19:00 EXIT!": {
+     "date": "2026-11-14",
+     "time": "19:00",
+     "title": "EXIT!",
+     "venue": "Võlvsaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-14 19:00 Karussell": {
+     "date": "2026-11-14",
+     "time": "19:00",
+     "title": "Karussell",
+     "venue": "Taevasaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-14 19:00 Ülestähendusi põranda alt": {
+     "date": "2026-11-14",
+     "time": "19:00",
+     "title": "Ülestähendusi põranda alt",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-14 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
+     "date": "2026-11-14",
+     "time": "19:00",
+     "title": "Käitumisreeglid tänapäeva ühiskonnas",
+     "venue": "Hobuveski",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -576,15 +630,6 @@
      "time": "19:00",
      "title": "Orvud",
      "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-17 19:00 Öö": {
-     "date": "2026-11-17",
-     "time": "19:00",
-     "title": "Öö",
-     "venue": "Taevasaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -643,51 +688,6 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-13 19:00 Käitumisreeglid tänapäeva ühiskonnas": {
-     "date": "2026-11-13",
-     "time": "19:00",
-     "title": "Käitumisreeglid tänapäeva ühiskonnas",
-     "venue": "Hobuveski",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-13 19:00 EXIT!": {
-     "date": "2026-11-13",
-     "time": "19:00",
-     "title": "EXIT!",
-     "venue": "Võlvsaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-14 19:00 EXIT!": {
-     "date": "2026-11-14",
-     "time": "19:00",
-     "title": "EXIT!",
-     "venue": "Võlvsaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-14 19:00 Karussell": {
-     "date": "2026-11-14",
-     "time": "19:00",
-     "title": "Karussell",
-     "venue": "Taevasaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-14 19:00 Ülestähendusi põranda alt": {
-     "date": "2026-11-14",
-     "time": "19:00",
-     "title": "Ülestähendusi põranda alt",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2026-11-11 19:00 Sinisilmsed": {
      "date": "2026-11-11",
      "time": "19:00",
@@ -702,42 +702,6 @@
      "time": "19:00",
      "title": "Tõeline Lääs (18.08 “Tõeline lääs” asendusetendus)",
      "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-10 19:00 Nachtland": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Nachtland",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-10 19:00 Südameharjutus": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Südameharjutus",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-10 19:00 Esietendus": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Esietendus",
-     "venue": "Hobuveski (Lai tn. 47)",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-10 19:00 Avamine": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Avamine",
-     "venue": "Kammersaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -773,24 +737,6 @@
   "draamateater": {
    "reminders": {},
    "perfs": {
-    "2026-11-10 19:00 Hamlet": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Hamlet",
-     "venue": "suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-10 19:00 Prima facie": {
-     "date": "2026-11-10",
-     "time": "19:00",
-     "title": "Prima facie",
-     "venue": "väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2026-11-11 19:00 12 vihast meest": {
      "date": "2026-11-11",
      "time": "19:00",
@@ -815,8 +761,8 @@
      "title": "12 vihast meest",
      "venue": "suur saal",
      "desc": "",
-     "status": "buy",
-     "url": "https://www.piletimaailm.com/performances/153639/buy?lang=et"
+     "status": "soldout",
+     "url": null
     },
     "2026-11-12 19:00 Maag": {
      "date": "2026-11-12",
@@ -833,8 +779,8 @@
      "title": "500 aastat sõprust",
      "venue": "suur saal",
      "desc": "NB! \"Tõde ja õigus\" on asendatud etendusega \"500 aastat sõprust\"",
-     "status": "buy",
-     "url": "https://www.piletimaailm.com/performances/152236/buy?lang=et"
+     "status": "soldout",
+     "url": null
     },
     "2026-11-13 19:00 Solist": {
      "date": "2026-11-13",
@@ -914,8 +860,8 @@
      "title": "Prima facie",
      "venue": "väike saal",
      "desc": "Link: pärast etendust kohtumine trupiga",
-     "status": "buy",
-     "url": "https://www.piletimaailm.com/performances/152974/buy?lang=et"
+     "status": "soldout",
+     "url": null
     },
     "2026-11-18 19:00 Vaimude tund Koidula tänavas": {
      "date": "2026-11-18",
