@@ -1,50 +1,14 @@
 {
- "last_check": "2026-11-22T04:27:00",
+ "last_check": "2026-11-22T12:11:00",
  "theaters": {
   "linnateater": {
    "reminders": {},
    "perfs": {
-    "2026-12-17 19:00 Ülestähendusi põranda alt": {
-     "date": "2026-12-17",
-     "time": "19:00",
-     "title": "Ülestähendusi põranda alt",
-     "venue": "Must saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-17 19:00 Avamine": {
-     "date": "2026-12-17",
-     "time": "19:00",
-     "title": "Avamine",
-     "venue": "Kammersaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
     "2027-03-08 19:00 Orvud (16.11.26 “Orvud” asendusetendus)": {
      "date": "2027-03-08",
      "time": "19:00",
      "title": "Orvud (16.11.26 “Orvud” asendusetendus)",
      "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-17 19:00 Suur veeuputus": {
-     "date": "2026-12-17",
-     "time": "19:00",
-     "title": "Suur veeuputus",
-     "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-18 19:00 Avamine": {
-     "date": "2026-12-18",
-     "time": "19:00",
-     "title": "Avamine",
-     "venue": "Kammersaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -139,53 +103,8 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-08 19:00 Orvud": {
-     "date": "2026-12-08",
-     "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-09 19:00 Orvud": {
-     "date": "2026-12-09",
-     "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-01 19:00 EXIT!": {
-     "date": "2026-12-01",
-     "time": "19:00",
-     "title": "EXIT!",
-     "venue": "Võlvsaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-09 19:00 EXIT!": {
-     "date": "2026-12-09",
-     "time": "19:00",
-     "title": "EXIT!",
-     "venue": "Võlvsaal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-02 19:00 Orvud": {
-     "date": "2026-12-02",
-     "time": "19:00",
-     "title": "Orvud",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-09 19:00 Ülestähendusi põranda alt": {
-     "date": "2026-12-09",
+    "2026-12-17 19:00 Ülestähendusi põranda alt": {
+     "date": "2026-12-17",
      "time": "19:00",
      "title": "Ülestähendusi põranda alt",
      "venue": "Must saal",
@@ -193,11 +112,29 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-02 19:00 Sinisilmsed": {
-     "date": "2026-12-02",
+    "2026-12-17 19:00 Avamine": {
+     "date": "2026-12-17",
      "time": "19:00",
-     "title": "Sinisilmsed",
-     "venue": "Must saal",
+     "title": "Avamine",
+     "venue": "Kammersaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-17 19:00 Suur veeuputus": {
+     "date": "2026-12-17",
+     "time": "19:00",
+     "title": "Suur veeuputus",
+     "venue": "Suur saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-18 19:00 Avamine": {
+     "date": "2026-12-18",
+     "time": "19:00",
+     "title": "Avamine",
+     "venue": "Kammersaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -207,15 +144,6 @@
      "time": "19:00",
      "title": "Vaikus",
      "venue": "Suur saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-12-02 19:00 EXIT!": {
-     "date": "2026-12-02",
-     "time": "19:00",
-     "title": "EXIT!",
-     "venue": "Võlvsaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -328,8 +256,8 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-01 19:00 Orvud": {
-     "date": "2026-12-01",
+    "2026-12-08 19:00 Orvud": {
+     "date": "2026-12-08",
      "time": "19:00",
      "title": "Orvud",
      "venue": "Väike saal",
@@ -337,8 +265,35 @@
      "status": "soldout",
      "url": null
     },
-    "2026-12-01 19:00 Sinisilmsed": {
-     "date": "2026-12-01",
+    "2026-12-09 19:00 Orvud": {
+     "date": "2026-12-09",
+     "time": "19:00",
+     "title": "Orvud",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-09 19:00 EXIT!": {
+     "date": "2026-12-09",
+     "time": "19:00",
+     "title": "EXIT!",
+     "venue": "Võlvsaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-09 19:00 Ülestähendusi põranda alt": {
+     "date": "2026-12-09",
+     "time": "19:00",
+     "title": "Ülestähendusi põranda alt",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-02 19:00 Sinisilmsed": {
+     "date": "2026-12-02",
      "time": "19:00",
      "title": "Sinisilmsed",
      "venue": "Must saal",
@@ -346,20 +301,11 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-24 19:00 Annapurna": {
-     "date": "2026-11-24",
+    "2026-12-02 19:00 EXIT!": {
+     "date": "2026-12-02",
      "time": "19:00",
-     "title": "Annapurna",
-     "venue": "Väike saal",
-     "desc": "",
-     "status": "soldout",
-     "url": null
-    },
-    "2026-11-24 19:00 Nõusolek": {
-     "date": "2026-11-24",
-     "time": "19:00",
-     "title": "Nõusolek",
-     "venue": "Must saal",
+     "title": "EXIT!",
+     "venue": "Võlvsaal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -436,11 +382,38 @@
      "status": "soldout",
      "url": null
     },
-    "2026-11-23 19:00 Novecento": {
-     "date": "2026-11-23",
+    "2026-12-01 19:00 Orvud": {
+     "date": "2026-12-01",
      "time": "19:00",
-     "title": "Novecento",
-     "venue": "Hobuveski",
+     "title": "Orvud",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-01 19:00 Sinisilmsed": {
+     "date": "2026-12-01",
+     "time": "19:00",
+     "title": "Sinisilmsed",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-01 19:00 EXIT!": {
+     "date": "2026-12-01",
+     "time": "19:00",
+     "title": "EXIT!",
+     "venue": "Võlvsaal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-12-02 19:00 Orvud": {
+     "date": "2026-12-02",
+     "time": "19:00",
+     "title": "Orvud",
+     "venue": "Väike saal",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -459,6 +432,33 @@
      "time": "19:00",
      "title": "Nõusolek",
      "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-24 19:00 Annapurna": {
+     "date": "2026-11-24",
+     "time": "19:00",
+     "title": "Annapurna",
+     "venue": "Väike saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-24 19:00 Nõusolek": {
+     "date": "2026-11-24",
+     "time": "19:00",
+     "title": "Nõusolek",
+     "venue": "Must saal",
+     "desc": "",
+     "status": "soldout",
+     "url": null
+    },
+    "2026-11-23 19:00 Novecento": {
+     "date": "2026-11-23",
+     "time": "19:00",
+     "title": "Novecento",
+     "venue": "Hobuveski",
      "desc": "",
      "status": "soldout",
      "url": null
@@ -778,8 +778,8 @@
      "title": "Hamlet",
      "venue": "suur saal",
      "desc": "",
-     "status": "buy",
-     "url": "https://www.piletimaailm.com/performances/153843/buy?lang=et"
+     "status": "soldout",
+     "url": null
     },
     "2026-12-08 19:00 Mets": {
      "date": "2026-12-08",
